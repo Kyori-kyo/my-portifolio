@@ -1,113 +1,67 @@
-import Image from 'next/image'
+/* eslint-disable react/no-unescaped-entities */
+import { useEffect } from 'react'
+import AboutMe from './Pages/aboutme/page'
+import HomePage from './Pages/homepage/page'
+import MyWork from './Pages/mywork/page'
+import Contact from './Pages/contact/page'
+import SocialMedias from './components/SocialMedias'
+import WorkCard from './components/WorkCard'
+import MatrixEffect from './components/MatrixEffect'
+ 
+// 
+// window.document.addEventListener("scroll", (event) => {
+// 	console.log(event)
+// });
 
 export default function Home() {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+	return (
+		<main className="md:bg-red-700 flex min-h-screen flex-col items-center text-2xl gap-5 relative container">
+			
+			<div className={'flex justify-center items-center gap-5 fixed top-0 h-16 w-full bg-[rgb(22, 22, 22)] backdrop-blur dark:bg-black/[0.3] z-10'}>
+					<a href="#homePage" className={'hover:scale-110 hover:text-orange-500'}>.Home</a>
+					<a href="#aboutMe"  className={'hover:scale-110 hover:text-orange-500'}>.Readme</a>
+					<a href="#myWork"   className={'hover:scale-110 hover:text-orange-500'}>Projects</a>
+					<a href="#contact"  className={'hover:scale-110 hover:text-orange-500'}>Contact</a>
+			</div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+			<div className={''}>
+				<HomePage />
+			</div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+			<div className={''}>
+				<AboutMe />
+			</div>
+			
+			<div className={''}>
+				<MyWork />
+			</div>
+				
+			
+			<div id='contact' className={'alinhamentoFlex'}>
+				<Contact />
+			</div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+			<div className={'flex justify-center items-center gap-5 fixed bottom-0 h-16 rounded-full px-5 mb-5 bg-[rgb(22, 22, 22)] backdrop-blur dark:bg-black/[0.3] z-10'}>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+				<SocialMedias />
+			</div>
+
+			{/* <div className={'absolute top-20 right-full pr-10'}>
+				<a href='#homePage'>
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="72" height="72" preserveAspectRatio="xMidYMid meet" className={'slide-top'}>
+						<g clip-path="url(#__lottie_element_2)">
+							
+							<g transform="matrix(1,0,0,1,36,36)" opacity="1" className='block'>
+								<path stroke-linecap="butt" stroke-linejoin="miter"  fill-opacity="0" stroke-miterlimit="4" stroke="rgb(207,207,207)" stroke-opacity="1" stroke-width="2" d=" M18.323999404907227,4.427999973297119 C18.323999404907227,4.427999973297119 18.28700065612793,14.213000297546387 18.28700065612793,14.213000297546387 C18.28700065612793,24.312999725341797 10.100000381469727,32.5 0,32.5 C0,32.5 0,32.5 0,32.5 C-10.100000381469727,32.5 -18.28700065612793,24.312999725341797 -18.28700065612793,14.213000297546387 C-18.28700065612793,14.213000297546387 -18.28700065612793,-14.213000297546387 -18.28700065612793,-14.213000297546387 C-18.28700065612793,-24.312999725341797 -10.100000381469727,-32.5 0,-32.5 C0,-32.5 0,-32.5 0,-32.5 C10.100000381469727,-32.5 18.28700065612793,-24.312999725341797 18.28700065612793,-14.213000297546387 C18.28700065612793,-14.213000297546387 18.28700065612793,7.375999927520752 18.28700065612793,7.375999927520752"></path></g><g className='none' transform="matrix(1,0,0,1,36,36)" opacity="1"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(207,207,207)" stroke-opacity="1" stroke-width="2" d="M0 0"></path></g><g transform="matrix(1,0,0,1,36,36)" opacity="1" className='block'><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(155,55,255)" stroke-opacity="1" stroke-width="2" d="M0 0"></path></g><g className='none' transform="matrix(1,0,0,1,36,36)" opacity="1"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(155,55,255)" stroke-opacity="1" stroke-width="2" d="M0 0"></path></g><g className='block' transform="matrix(1,0,0,1,36,43.97333526611328)" opacity="1"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(155,55,255)" stroke-opacity="1" stroke-width="2" d=" M-0.10599999874830246,2.9800000190734863 C0.003000000026077032,4.315000057220459 0.06499999761581421,5.785999774932861 0.06499999761581421,7.4120001792907715 C0.06499999761581421,7.4120001792907715 0.006000000052154064,16.625999450683594 0.006000000052154064,16.625999450683594"></path></g><g className='block' transform="matrix(1,0,0,1,54,52.22333526611328)" opacity="1"><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(155,55,255)" stroke-opacity="1" stroke-width="2" d=" M-24.45199966430664,3.003000020980835 C-24.45199966430664,3.003000020980835 -18.042999267578125,9.496999740600586 -18.042999267578125,9.496999740600586 C-18.042999267578125,9.496999740600586 -11.54800033569336,3.003000020980835 -11.54800033569336,3.003000020980835">
+								</path>
+							</g>
+						</g>
+					</svg>
+				</a>
+			</div> */}
+		</main>
+	)
 }
+
+// intersection observer
