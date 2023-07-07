@@ -6,7 +6,7 @@ type Props = {}
 const mywork = (props: Props) => {
     return (
         <div id='myWork' className={'alinhamentoFlex'}>
-            <h1 className="text-4xl m-5 border-b-2 border-spacing-x-0.5 border-orange-500">
+            <h1 className={'text-4xl m-5 border-b-2 border-spacing-x-0.5 border-orange-500'}>
                 PROJECTS
             </h1>
 
