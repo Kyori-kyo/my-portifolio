@@ -6,7 +6,7 @@ import MyWork from './Pages/mywork/page'
 import Contact from './Pages/contact/page'
 import SocialMedias from './components/SocialMedias'
 import WorkCard from './components/WorkCard'
-import MatrixEffect from './components/MatrixEffect'
+// import MatrixEffect from './components/MatrixEffect'
  
 // 
 // window.document.addEventListener("scroll", (event) => {
