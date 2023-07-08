@@ -9,11 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "axios": "^0.26.1",
     "@types/node": "20.3.1",
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
+    "axios": "^0.26.1",
+    "dotenv": "^16.3.1",
     "eslint": "8.43.0",
     "eslint-config-next": "13.4.7",
     "next": "13.4.7",
