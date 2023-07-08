@@ -6,7 +6,7 @@ const Contact = (props: Props) => {
         <div className={'flex justify-center w-screen'} id="pog">
             <div className={'flex flex-col gap-10 justify-center items-center max-w-screen-xl w-full glassMorphDiv px-10 py-16 rounded-3xl'}>
                 <h1 className={'text-4xl border-b-2 border-spacing-x-0.5 border-orange-500'}>
-                    CONTACT
+                    .CONTACT
                 </h1>
                 <p>
                     If you have a question 
