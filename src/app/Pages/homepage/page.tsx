@@ -27,8 +27,8 @@ const homepage = (props: Props) => {
 					You can contact me on my <a className={'hover:text-white text-orange-400 underline'} href="mailto:richardlcmoreira@gmail.com">E-mail</a>
 				</p>
 			</div>
-
-			<span className={'w-32 border border-orange-500'}></span>
+			<br/>
+			<br/>
 		</div>
     )
 }
