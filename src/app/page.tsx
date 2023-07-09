@@ -37,8 +37,8 @@ export default function Home() {
 			<div className={''}>
 				<AboutMe />
 			</div>
-			
-			{/* <div className={''}>
+{/* 			
+			<div className={''}>
 				<MyWork />
 			</div> */}
 				

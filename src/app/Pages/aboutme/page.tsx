@@ -11,7 +11,7 @@ const AboutMe = (props: Props) => {
             <section className={'flex flex-col justify-center items-center gap-10'}>
                 
 
-                <div className={'flex md:flex-row flex-col md:gap-10 justify-center items-center max-w-screen-xl glassMorphDiv md:px-10 py-10 md:py-16  rounded-3xl'}>
+                <div className={'flex md:flex-row flex-col md:gap-10 justify-center items-center max-w-screen-xl glassMorphDiv md:px-10 py-10 md:py-16  md:rounded-3xl'}>
                     <Image
                         className={'rounded-full shadow-2xl shadow-gray-950 w-48'}
                         src="/images/fireplace.jpg" 
@@ -26,17 +26,14 @@ const AboutMe = (props: Props) => {
                         </h1>
 
                         <div className={'flex flex-col text-left text-sm md:text-lg px-10 md:px-0'}>
-                            Sou engenheiro de software há 2 anos e tenho experiência atuando em ambas das stacks web (frontend e backend). Especializado em criar soluções eficientes e escaláveis.
-                            Possuo habilidades sólidas em linguagens como JavaScript e um pouco de TypeScript, Python, Java, Apex e Go.
-                            Minha experiência inclui o desenvolvimento de aplicativos utilizando frameworks como o LWC da Salesforce, React e tenho conhecimento básico em VueJS.
-                            Sou apaixonado por resolver problemas complexos e estou sempre em busca de aprendizado contínuo para me manter atualizado com as últimas tendências tecnológicas.
-                            Com uma abordagem orientada a resultados, estou pronto para enfrentar desafios e colaborar em projetos inovadores.
+                        Engenheiro de software há 2 anos com experiência atuando em desenvolvimento web e mobile. Porém, me aventuro no mobile, IAs e info sec.<br/>
+                        Sou completamente apaixonado pelo que faço e é justamente isso o que me faz constantemente buscar por novas tecnologias e metodologias para sempre poder entregar o melhor possível.
                         </div>
 
                         {/* <div class="slider">
                             <div class="slide-track">
                                 <div class="slide"></div> */}
-                        <div className={'flex overflow-auto gap-5 p-5 overflow: hidden;'}>
+                        <div className={'flex overflow-hidden md:overflow-auto gap-5 p-5 overflow: hidden;'}>
                             <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"                  alt="" />
                             <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"                   alt="" />
                             <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"                     alt="" />
