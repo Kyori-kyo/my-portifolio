@@ -11,22 +11,21 @@ const AboutMe = (props: Props) => {
             <section className={'flex flex-col justify-center items-center gap-10'}>
                 
 
-                <div className={'flex gap-10 justify-center items-center max-w-screen-xl glassMorphDiv px-10 py-16  rounded-3xl'}>
+                <div className={'flex md:flex-row flex-col md:gap-10 justify-center items-center max-w-screen-xl glassMorphDiv md:px-10 py-10 md:py-16  rounded-3xl'}>
                     <Image
-                        className={'rounded-full shadow-2xl shadow-gray-950'}
+                        className={'rounded-full shadow-2xl shadow-gray-950 w-48'}
                         src="/images/fireplace.jpg" 
                                                             alt="a cup filled with capuccino in a table"
                         width={'500'}
                         height={'300'}
                     />
                     
-
                     <div>
-                        <h1 className="text-4xl my-5 border-b-2 border-orange-500 w-[145px]">
+                        <h1 className="text-xl md:text-4xl my-5 border-b-2 border-orange-500 w-[81px] md:w-[145px] ml-10 md:ml-0">
                             .README
                         </h1>
 
-                        <div className={'flex flex-col text-left text-lg'}>
+                        <div className={'flex flex-col text-left text-sm md:text-lg px-10 md:px-0'}>
                             Sou engenheiro de software há 2 anos e tenho experiência atuando em ambas das stacks web (frontend e backend). Especializado em criar soluções eficientes e escaláveis.
                             Possuo habilidades sólidas em linguagens como JavaScript e um pouco de TypeScript, Python, Java, Apex e Go.
                             Minha experiência inclui o desenvolvimento de aplicativos utilizando frameworks como o LWC da Salesforce, React e tenho conhecimento básico em VueJS.

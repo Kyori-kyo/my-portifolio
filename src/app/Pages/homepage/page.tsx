@@ -15,7 +15,7 @@ const homepage = (props: Props) => {
 				height={200} 
 				alt={"richard's profile picture"}
 			/>
-			<h1 className={'text-4xl font-semibold typewriter'}>
+			<h1 className={'md:text-4xl text-xl font-semibold typewriter'}>
 				Hi<span className={'text-orange-400'}>!</span> I<span className={'text-orange-400'}>&#39;</span>m Ríchard Lucas
 			</h1>
 
