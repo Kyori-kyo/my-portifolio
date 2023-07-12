@@ -5,7 +5,7 @@ import Image from 'next/image'
 
 type Props = {}
 
-const homepage = (props: Props) => {
+const Homepage = (props: Props) => {
     return (
 		<div id="homePage" className={'alinhamentoFlex'}>
 			<Image 
@@ -33,4 +33,4 @@ const homepage = (props: Props) => {
     )
 }
 
-export default homepage;
+export default Homepage;
