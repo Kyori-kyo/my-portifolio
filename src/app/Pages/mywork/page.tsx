@@ -14,6 +14,7 @@ const mywork = (props: Props) => {
 
                 <a className={"w-1/3"} href='https://github.com/Kyori-kyo/my-portifolio' target='_blank'>
                     <WorkCard 
+                        urlLink={'https://github.com/Kyori-kyo/my-portifolio'}
                         langs={['TypeScript', 'NextJS', 'TailwindCSS']}
                         titulo={'Meu portifólio'}
                         imagem={'/images/profilePic.png'}
@@ -23,6 +24,7 @@ const mywork = (props: Props) => {
                 
                 <a className={"w-1/3"} href='https://github.com/Ascend-Software' target='_blank'>
                     <WorkCard 
+                        urlLink={'https://github.com/Ascend-Software'}
                         langs={['TypeScript', 'NextJS', 'TailwindCSS']}
                         titulo={'Ascent Software'}
                         imagem={'/images/Ascent.png'}
@@ -32,6 +34,7 @@ const mywork = (props: Props) => {
 
                 <a className={"w-1/3"} href='https://github.com/Kyori-kyo/meu-portfolio' target='_blank'>
                     <WorkCard 
+                        urlLink={'https://github.com/Kyori-kyo/meu-portfolio'}
                         langs={['TypeScript', 'NextJS', 'TailwindCSS']}
                         titulo={'Meu primeiro código'}
                         imagem={'/images/loguinho.png'}
