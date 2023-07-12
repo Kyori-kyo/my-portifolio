@@ -5,7 +5,7 @@ import HomePage from './Pages/homepage/page'
 import Contact from './Pages/contact/page'
 import SocialMedias from './components/SocialMedias'
 import Carousel from './components/Carousel'
-// import MyWork from './Pages/mywork/page'
+import MyWork from './Pages/mywork/page'
 // import MatrixEffect from './components/MatrixEffect'
 // import WorkCard from './components/WorkCard'
 
@@ -22,8 +22,8 @@ import Carousel from './components/Carousel'
 export default function Home() {
 
 	return (
-		<main className={'w-screen'}>
-			<div className="flex h-screen flex-col items-center md:text-2xl gap-5 relative container">
+		<main>
+			<div className="flex flex-col w-full px-36 justify-center items-center md:text-2xl gap-5 relative container">
 
 				<div className={'flex justify-center items-center gap-5 fixed top-0 h-16 w-full bg-[rgb(22, 22, 22)] backdrop-blur dark:bg-black/[0.3] z-10'}>
 					<a href="#homePage" className={'hover:scale-110 hover:text-orange-500'}>.Home</a>
@@ -32,25 +32,22 @@ export default function Home() {
 					<a href="#contact"  className={'hover:scale-110 hover:text-orange-500'}>.Contact</a>
 				</div>
 
-				<div>
-					<HomePage />
-				</div>
+				<HomePage />
 
-				<div>
-					<AboutMe />
-				</div>
+				<AboutMe />
+		
 
 				{/* <div>
 					<Carousel />
 				</div> */}
-
-				{/* <div className={'hidden md:block'}>
-						<MyWork />
-					</div> */}
+{/* 
+				<div className={'hidden md:block'}>
+					<MyWork />
+				</div> */}
 						
-				<div>
+			
 					<Contact />
-				</div>
+			
 
 				<div className={'flex justify-center items-center gap-5 fixed bottom-0 h-16 rounded-full px-5 mb-5 bg-[rgb(22, 22, 22)] backdrop-blur dark:bg-black/[0.3] z-10'}>
 					<SocialMedias />

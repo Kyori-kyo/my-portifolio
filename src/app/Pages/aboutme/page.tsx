@@ -6,16 +6,14 @@ type Props = {}
 
 const AboutMe = (props: Props) => {
     return (
-        <div id="aboutMe" className={'flex flex-col justify-center items-center gap-10 h-screen'}>
-
+        <div id="aboutMe" className={'flex flex-col justify-center items-center gap-10 h-screen '}>
             <section className={'flex flex-col justify-center items-center gap-10'}>
-                
-
-                <div className={'flex md:flex-row flex-col md:gap-10 justify-center items-center max-w-screen-xl glassMorphDiv md:px-10 py-10 md:py-16  md:rounded-3xl'}>
+                <div className={'flex flex-row md:gap-10 justify-center items-center glassMorphDiv md:rounded-3xl p-12'}>
+                    
                     <Image
                         className={'rounded-full shadow-2xl shadow-gray-950 w-48'}
                         src="/images/fireplace.jpg" 
-                                                            alt="a cup filled with capuccino in a table"
+                        alt="a cup filled with capuccino in a table"
                         width={'500'}
                         height={'300'}
                     />

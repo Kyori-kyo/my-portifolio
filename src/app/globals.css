@@ -4,7 +4,7 @@
 
 @layer components {
   .alinhamentoFlex {
-    @apply flex flex-col gap-5 justify-center text-center items-center h-screen
+    @apply flex flex-col justify-center text-center items-center h-screen
   }
 }
 :root {

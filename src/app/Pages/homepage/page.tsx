@@ -7,7 +7,7 @@ type Props = {}
 
 const Homepage = (props: Props) => {
     return (
-		<div id="homePage" className={'alinhamentoFlex'}>
+		<div id="homePage" className={'alinhamentoFlex gap-5'}>
 			<Image 
 				src={'/images/profilePic.png'} 
 				className={'rounded-full shadow-2xl shadow-gray-950'}

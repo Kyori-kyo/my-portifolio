@@ -3,21 +3,24 @@ type Props = {}
 const Contact = (props: Props) => {
 
     return (
-            <div className={'flex md:w-4/5'} id="contact">
-                <div className={'flex flex-col glassMorphDiv px-10 py-16 rounded-3xl items-center w-screen'}>
-                    <h1 className={'text-4xl border-b-2 border-orange-500 w-44 ml-auto mr-auto'}>
-                        .CONTACT
-                    </h1>
-                    <p className={'pt-10'}>
-                        If you have a question 
-                        <br/> 
-                        or just want to get in touch
-                        <br/> 
-                        <br/> 
-                        feel free to send me an <a className={'text-orange-500 underline hover:scale-50'} href="mailto:richardlcmoreira@gmail.com">e-mail</a>
-                        <br/> 
-                        or contact me on my social media
-                    </p>
+        <div id="contact" className={'flex flex-col justify-center items-center gap-10 w-full h-screen'}>
+            <section className={'flex flex-col justify-center items-center gap-10 h-fit w-full'}>
+                <div className={'flex flex-col md:gap-10 items-center glassMorphDiv md:rounded-3xl p-12 w-full'}>
+                    <div>
+                        <h1 className={'flex text-4xl border-b-2 border-orange-500 w-fit'}>
+                            .CONTACT
+                        </h1>
+                        <p className={'pt-10'}>
+                            If you have a question w
+                            <br/> 
+                            or just want to get in touch
+                            <br/> 
+                            <br/> 
+                            feel free to send me an <a className={'text-orange-500 underline hover:scale-50'} href="mailto:richardlcmoreira@gmail.com">e-mail</a>
+                            <br/> 
+                            or contact me on my social media
+                        </p>
+                    </div>
                     <div className={'absolute -bottom-36'}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="72" height="72" preserveAspectRatio="xMidYMid meet" className={'slide-top'}>
                             <g clip-path="url(#__lottie_element_2)">
@@ -35,6 +38,7 @@ const Contact = (props: Props) => {
                         </svg>
                     </div>
                 </div>
+            </section>
         </div>
     )
 }
