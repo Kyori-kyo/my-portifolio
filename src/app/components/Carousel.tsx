@@ -40,9 +40,8 @@ const Carousel = (props: Props) => {
     ];
 
   return (
-    <div className='w-[50rem]'>
+    <div id='myWorkMob' className={'px-10 mt-44 h-screen w-full'}>
         <Swiper
-            // install Swiper modules
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}
@@ -52,17 +51,17 @@ const Carousel = (props: Props) => {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
         >
-             {workCardData.map((card, index) => (
-              <SwiperSlide key={card.urlLink + index}>
-                <WorkCard
-                    key={card.urlLink}
-                    urlLink={card.urlLink}
-                    langs={card.langs}
-                    titulo={card.titulo}
-                    imagem={card.imagem}
-                    descricao={card.descricao}
-                />
-              </SwiperSlide>
+            {workCardData.map((card, index) => (
+                <SwiperSlide key={card.urlLink + index}>
+                    <WorkCard
+                        key={card.urlLink}
+                        urlLink={card.urlLink}
+                        langs={card.langs}
+                        titulo={card.titulo}
+                        imagem={card.imagem}
+                        descricao={card.descricao}
+                    />
+                </SwiperSlide>
             ))}
         </Swiper>
     </div>
