@@ -40,8 +40,9 @@ const Carousel = (props: Props) => {
     ];
 
   return (
-    <div id='myWorkMob' className={'px-10 mt-44 h-screen w-full'}>
+    <div id='myWorkMob' className={'px-10 h-screen w-full'}>
         <Swiper
+            className={'mt-36'}
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}

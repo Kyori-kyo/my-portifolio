@@ -1,12 +1,13 @@
 import Link from "next/link"
 import Image from 'next/image'
-
 // import Doggo from "@/app/figures/doggo";
 
 type Props = {}
 
 const Homepage = (props: Props) => {
     return (
+
+		
 		<div id="homePage" className={'alinhamentoFlex gap-5'}>
 			<Image 
 				src={'/images/profilePic.png'} 

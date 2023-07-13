@@ -1,23 +1,12 @@
-/* eslint-disable react/no-unescaped-entities */
-import { useEffect } from 'react'
 import AboutMe from './Pages/aboutme/page'
 import HomePage from './Pages/homepage/page'
 import Contact from './Pages/contact/page'
 import SocialMedias from './components/SocialMedias'
 import Carousel from './components/Carousel'
 import MyWork from './Pages/mywork/page'
-// import MatrixEffect from './components/MatrixEffect'
-// import WorkCard from './components/WorkCard'
 
 // todo:
-// a links on projects
-// finish contact section
-// responsivity
- 
-// 
-// window.document.addEventListener("scroll", (event) => {
-// 	console.log(event)
-// });
+// highlight the current page on the navbar
 
 export default function Home() {
 
