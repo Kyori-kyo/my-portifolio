@@ -7,7 +7,7 @@ const Contact = (props: Props) => {
             <section className={'flex flex-col justify-center items-center gap-10 h-fit w-full'}>
                 <div className={'flex flex-col md:gap-10 items-center glassMorphDiv md:rounded-3xl p-12 w-full'}>
                     <div>
-                        <h1 className={'flex text-4xl border-b-2 border-orange-500 w-fit'}>
+                        <h1 className={'flex text-xl md:text-4xl border-b-2 border-orange-500 w-fit'}>
                             .CONTACT
                         </h1>
                         <p className={'pt-10'}>
@@ -21,7 +21,7 @@ const Contact = (props: Props) => {
                             or contact me on my social media
                         </p>
                     </div>
-                    <div className={'absolute -bottom-36'}>
+                    <div className={'absolute -bottom-24 md:-bottom-36'}>
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="72" height="72" preserveAspectRatio="xMidYMid meet" className={'slide-top'}>
                             <g clip-path="url(#__lottie_element_2)">
                                 
@@ -32,6 +32,7 @@ const Contact = (props: Props) => {
 
                                 <g className='block' transform="matrix(1,0,0,1,54,52.22333526611328)" opacity="1">
                                     <path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(249,115,22)" stroke-opacity="1" stroke-width="2" d=" M-24.45199966430664,3.003000020980835 C-24.45199966430664,3.003000020980835 -18.042999267578125,9.496999740600586 -18.042999267578125,9.496999740600586 C-18.042999267578125,9.496999740600586 -11.54800033569336,3.003000020980835 -11.54800033569336,3.003000020980835">
+                                    <p>or</p>
                                     </path>
                                 </g>
                             </g>

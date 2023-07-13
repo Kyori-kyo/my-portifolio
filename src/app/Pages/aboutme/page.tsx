@@ -6,10 +6,9 @@ type Props = {}
 
 const AboutMe = (props: Props) => {
     return (
-        <div id="aboutMe" className={'flex flex-col justify-center items-center gap-10 h-screen '}>
+        <div id="aboutMe" className={'flex flex-col justify-center items-center gap-10 h-screen'}>
             <section className={'flex flex-col justify-center items-center gap-10'}>
-                <div className={'flex flex-row md:gap-10 justify-center items-center glassMorphDiv md:rounded-3xl p-12'}>
-                    
+                <div className={'flex flex-col md:flex-row md:gap-10 justify-center items-center glassMorphDiv md:rounded-3xl py-8 md:py-12 md:px-10'}>
                     <Image
                         className={'rounded-full shadow-2xl shadow-gray-950 w-48'}
                         src="/images/fireplace.jpg" 
@@ -28,10 +27,7 @@ const AboutMe = (props: Props) => {
                         Sou completamente apaixonado pelo que faço e é justamente isso o que me faz constantemente buscar por novas tecnologias e metodologias para sempre poder entregar o melhor possível.
                         </div>
 
-                        {/* <div class="slider">
-                            <div class="slide-track">
-                                <div class="slide"></div> */}
-                        <div className={'flex overflow-hidden md:overflow-auto gap-5 p-5 overflow: hidden;'}>
+                        {/* <div className={'flex overflow-hidden md:overflow-auto gap-5 p-5'}>
                             <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white"                  alt="" />
                             <img src="https://img.shields.io/badge/c++-%2300599C.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white"                   alt="" />
                             <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"                     alt="" />
@@ -51,40 +47,11 @@ const AboutMe = (props: Props) => {
                             <img src="https://img.shields.io/badge/Notion-%23000000.svg?style=for-the-badge&logo=notion&logoColor=white"                 alt="" />
                             <img src="https://img.shields.io/badge/Trello-%23026AA7.svg?style=for-the-badge&logo=Trello&logoColor=white"                 alt="" />
                             <img src="https://img.shields.io/badge/jira-%230A0FFF.svg?style=for-the-badge&logo=jira&logoColor=white"                     alt="" />
-                        </div>
+                        </div> */}
                     </div>
                     
                 </div>
             </section>
-
-            {/* <section className={'flex flex-col justify-center items-center gap-10 w-full'}>
-                <h1 className={'text-4xl p-5'}>
-                    My Expertise
-                </h1>
-                
-                
-                <div className={"flex mb-4 w-full text-center"}>
-                    <div className={"flex flex-col w-2/4 bg-gray-500 p-5 gap-5"}>
-                        <p>Software Devlopment</p>
-                        <p>Functional and OOP programming</p>
-                        <p>Design patterns</p>
-
-                    </div>
-
-                    <div className={"w-2/4 bg-gray-400"}>
-                        <h1 className={'p-5'}>Misc</h1>
-                        <p>Terminal</p>
-                        <p>Git</p>
-                        <p>Jest</p>
-                        <p>Cypress</p>
-                        <p>eXtreme Programming</p>
-                        <p>Netlify</p>
-                        <p>Wakatime</p>
-                        <p>Discord, Slack</p>
-                    </div>
-                </div>
-            </section> */}
-
         </div>
     )
 }

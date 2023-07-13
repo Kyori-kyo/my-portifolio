@@ -10,7 +10,7 @@ const Homepage = (props: Props) => {
 		<div id="homePage" className={'alinhamentoFlex gap-5'}>
 			<Image 
 				src={'/images/profilePic.png'} 
-				className={'rounded-full shadow-2xl shadow-gray-950'}
+				className={'rounded-full shadow-2xl shadow-gray-950 w-3/4 mb-5'}
 				width={200}
 				height={200} 
 				alt={"richard's profile picture"}
