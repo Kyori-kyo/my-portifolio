@@ -12,7 +12,7 @@ const WorkCard = ({ langs, titulo, imagem, descricao, urlLink }: Props) => {
     return (
         <a href={urlLink} target='_blank' className="relative bg-cover text-gray-200 max-w-[350px] min-w-[350px] max-h-[350px] min-h-[350px] tracking-wide group overflow-hidden rounded-2xl">
             
-            <div className="max-w-[350px] min-w-[350px] h-full flex items-end bg-gradient-to-t from-black/90 duration-500 translate-y-full group-hover:translate-y-0 bg-transparent absolute inset-0 z-10">
+            <div className="max-w-[350px] min-w-[350px] max-h-[340px] min-h-[340px] flex items-end bg-gradient-to-t from-black/90 duration-500 md:translate-y-full group-hover:translate-y-0 bg-transparent absolute inset-0 z-10">
                 <div className="pb-2 px-6 rounded-[0px] text-left max-w-[350px] min-w-[350px]">
                     <h1 className="inline text-lg font-semibold border-b-2 border-orange-500">{titulo}</h1>
                     <p className="text-base pb-2 pt-2">{descricao}</p>
