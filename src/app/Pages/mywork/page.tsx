@@ -32,12 +32,12 @@ const mywork = (props: Props) => {
     ];
 
     return (
-        <div id='myWork' className={''}>
-            <h1 className={'text-4xl m-5 border-b-2 border-spacing-x-0.5 border-orange-500'}>
+        <div id='myWork' className={'flex flex-col text-center justify-center items-center h-screen gap-5'}>
+            <h1 className={'flex text-4xl m-5 border-b-2 border-spacing-x-0.5 border-orange-500 w-[185px]'}>
                 .PROJECTS
             </h1>
 
-            <div className={"grid grid-cols-3  mb-2 w-full text-center gap-5"}>
+            <div className={"grid grid-cols-3 mb-2 w-full text-center gap-5"}>
 
                 {workCardData.map((card, index) => (
                     <WorkCard
