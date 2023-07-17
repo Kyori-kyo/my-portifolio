@@ -11,7 +11,7 @@ const Homepage = (props: Props) => {
 		<div id="homePage" className={'alinhamentoFlex gap-5'}>
 			<Image 
 				src={'/images/profilePic.png'} 
-				className={'rounded-full shadow-2xl shadow-gray-950 w-3/4 mb-5'}
+				className={'rounded-full shadow-2xl shadow-gray-950 w-48 mb-5'}
 				width={200}
 				height={200} 
 				alt={"richard's profile picture"}
@@ -24,9 +24,9 @@ const Homepage = (props: Props) => {
 				<p>
 					I&#39;m a software engineer
 				</p>
-				<p>
+				<div>
 					You can contact me on my <a className={'hover:text-white text-orange-400 underline'} href="mailto:richardlcmoreira@gmail.com">E-mail</a>
-				</p>
+				</div>
 			</div>
 			<br/>
 			<br/>

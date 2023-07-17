@@ -32,7 +32,7 @@ const mywork = (props: Props) => {
     ];
 
     return (
-        <div id='myWork' className={'flex flex-col text-center justify-center items-center h-screen gap-5'}>
+        <div id='myWork' className={'flex-col text-center justify-center items-center h-screen gap-5 hidden md:flex'}>
             <h1 className={'flex text-4xl m-5 border-b-2 border-spacing-x-0.5 border-orange-500 w-[185px]'}>
                 .PROJECTS
             </h1>

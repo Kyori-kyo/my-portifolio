@@ -12,7 +12,7 @@ export default function Home() {
 
 	return (
 		<main>
-			<div className="flex flex-col w-full md:px-36 justify-center items-center md:text-2xl gap-5 relative container">
+			<div className={'flex flex-col w-full md:px-36 justify-center items-center md:text-2xl gap-5 relative container'}>
 
 				<div className={'flex justify-center items-center gap-5 fixed top-0 h-16 w-full bg-[rgb(22, 22, 22)] backdrop-blur dark:bg-black/[0.3] z-10'}>
 					<a href="#homePage"  className={'hover:scale-110 hover:text-orange-500'}>.Home</a>
@@ -25,18 +25,20 @@ export default function Home() {
 				<HomePage />
 
 				<AboutMe />
-		
+			
 				<Carousel />
 
-				<div className={'hidden md:block'}>
-					<MyWork />
-				</div>
+				<MyWork />
 						
 				<Contact />
 			
-				<div className={'flex justify-center items-center gap-5 fixed bottom-0 h-16 rounded-full px-5 mb-5 bg-[rgb(22, 22, 22)] backdrop-blur dark:bg-black/[0.3] z-10'}>
+				<div className={'flex justify-center items-center gap-5 fixed bottom-0 h-16 rounded-full px-5 mb-5 bg-[rgb(22, 22, 22)] backdrop-blur dark:bg-black/[0.3] z-10 hidden md:block'}>
 					<SocialMedias />
 				</div>
+
+				{/* <div className={'absolute bottom-28'}>
+					<SocialMedias />
+				</div> */}
 			</div>
 
 		</main>
