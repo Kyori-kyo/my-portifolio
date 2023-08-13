@@ -6,9 +6,7 @@ type Props = {}
 
 const Homepage = (props: Props) => {
     return (
-
-		
-		<div id="homePage" className={'alinhamentoFlex gap-5'}>
+		<div id="homePage" style={{backgroundImage: `url(videos/fireplaceOverSea.mp4)`}} className={'generalPageAlign gap-5 bg-url'}>
 			<Image 
 				src={'/images/profilePic.png'} 
 				className={'rounded-full shadow-2xl shadow-gray-950 w-48 mb-5'}
@@ -16,13 +14,14 @@ const Homepage = (props: Props) => {
 				height={200} 
 				alt={"richard's profile picture"}
 			/>
-			<h1 className={'md:text-4xl text-xl font-semibold typewriter'}>
-				Hi<span className={'text-orange-400'}>!</span> I<span className={'text-orange-400'}>&#39;</span>m Ríchard Lucas
-			</h1>
+
+            <h1 className={'md:text-4xl text-xl font-semibold typewriter'}>
+                Hi<span className={'text-orange-400'}>!</span> I<span className={'text-orange-400'}>&#39;</span>m Ríchard Lucas
+            </h1>
 
 			<div className={'flex flex-col gap-5'}>
 				<p>
-					I&#39;m a software engineer
+					A software engineer who loves to work with games, AIs, websites and applications.
 				</p>
 				<div>
 					You can contact me on my <a className={'hover:text-white text-orange-400 underline'} href="mailto:richardlcmoreira@gmail.com">E-mail</a>
