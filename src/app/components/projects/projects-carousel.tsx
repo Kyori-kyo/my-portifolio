@@ -1,36 +1,29 @@
 "use client";
+import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import WorkCard from './work-card';
 import "swiper/css";
 import "swiper/css/pagination";
 import "./styles.css";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import { useEffect, useState } from "react";
+import useWindowDimensions from "@/app/hooks/use-window-dimentions";
 
 type Props = {}
 
 const ProjectsCarousel = (props: Props) => {
 
-    const [windowSize, setWindowSize] = useState([
-        window.innerWidth,
-    ]);
-
-    let isMobile = windowSize[0] < 768;
+    const { width } = useWindowDimensions();
+    const [slidesPerView, setSlidesPerView] = useState<number>(1);
 
     useEffect(() => {
-        const handleWindowResize = () => {
-            setWindowSize([window.innerWidth, window.innerHeight]);
-
-        };
-
-        typeof window !== "undefined" && window.addEventListener('resize', handleWindowResize);
-
-        return () => {
-            typeof window !== "undefined" && window.removeEventListener('resize', handleWindowResize);
-        };
-    }, []);
-
-    let slidesPerView = isMobile ? 1 : 3;
+        if (width && width > 700 && width < 1150) {
+            setSlidesPerView(2);
+        } else if (width && width > 1150) {
+            setSlidesPerView(3);
+        } else if (width && width < 700) {
+            setSlidesPerView(1);
+        }
+    }, [width]);
 
     const workCardData = [
         {
