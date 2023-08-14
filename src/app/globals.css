@@ -84,39 +84,6 @@ body {
     }
 }
 
-/* ==== Fade In ==== */
- .easeIn {
-    height: 300px;
-    background: red;
-    transition: all 2s;
-}
-/*
-.fadeInHover {
-    height: 190px;
-    transition: all 2s;
-}
-
-.fadeInHoverExtra {
-    transition: bottom 2s;
-}
-
-.bottomChange1 {
-    transition: bottom 2s;
-    bottom: 140px;
-    transition-delay: 2s;
-}
-
-.bottomChange2 {
-    transition: bottom 2s;
-    bottom: 90px;
-    transition-delay: 2s;
-}
-
-.bottomChange3 {
-    transition: bottom 2s;
-    bottom: 45px;
-    transition-delay: 2s;
-} */
 /* ==== homepage ==== */
 .typewriter {
     overflow: hidden;
@@ -125,7 +92,7 @@ body {
     margin: 0 auto;
     letter-spacing: .15em;
     animation: 
-        typing 2s steps(40, end),
+        typing 5s steps(100, end),
         blink-caret .75s step-end infinite;
 }
 @keyframes typing {
