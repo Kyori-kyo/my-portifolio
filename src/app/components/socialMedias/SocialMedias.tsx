@@ -16,7 +16,7 @@ const SocialMedias = (props: Props) => {
 	}
 
 	return (
-		<div id='footer' className={`flex flex-col items-center justify-center gap-5 z-20 fixed bottom-10 left-10 `}>
+		<div id='footer' className={`flex flex-col items-center justify-center gap-5 z-20 fixed bottom-5 left-5 md:bottom-10 md:left-10 `}>
 
 			<div className={`flex flex-col items-center justify-center relative`}>
 

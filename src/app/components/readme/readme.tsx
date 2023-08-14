@@ -10,7 +10,7 @@ const ReadMe = (props: Props) => {
     const idade = new Date().getFullYear() - 2000;
 
     return (
-        <div id="readMe" className={`test flex flex-col justify-center content-center items-center gap-10 h-screen md:px-32`}>
+        <div id="readMe" className={`flex flex-col md:justify-center pt-14 md:pt-0 content-center items-center gap-10 h-screen md:px-32`}>
             <section className={'flex flex-col justify-center items-center gap-10'}>
                 <div className={'flex flex-col md:flex-row md:gap-10 justify-center items-center glassMorphDiv md:rounded-3xl py-8 md:py-12 md:px-10 mt-14 md:mt-0'}>
                     <Image
@@ -22,7 +22,7 @@ const ReadMe = (props: Props) => {
                     />
 
                     <div>
-                        <h1 className="text-xl md:text-4xl border-b-2 border-orange-500 w-fit">
+                        <h1 className="mx-10 text-xl md:text-4xl border-b-2 border-orange-500 w-fit">
                             .README
                         </h1>
                         <br />
