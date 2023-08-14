@@ -20,16 +20,13 @@ const ProjectsCarousel = (props: Props) => {
     useEffect(() => {
         const handleWindowResize = () => {
             setWindowSize([window.innerWidth, window.innerHeight]);
-            console.log(windowSize[0]);
 
         };
 
-        window.addEventListener('resize', handleWindowResize);
-        console.log(windowSize[0]);
+        typeof window !== "undefined" && window.addEventListener('resize', handleWindowResize);
 
         return () => {
-            window.removeEventListener('resize', handleWindowResize);
-            console.log(windowSize[0]);
+            typeof window !== "undefined" && window.removeEventListener('resize', handleWindowResize);
         };
     }, []);
 
