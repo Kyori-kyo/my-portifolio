@@ -17,7 +17,7 @@ const ReadMe = (props: Props) => {
                 <div className={'flex flex-col md:flex-row md:gap-10 justify-center items-center glassMorphDiv md:rounded-3xl py-8 md:py-12 md:px-10 mt-14 md:mt-0'}>
                     <Image
                         className={'rounded-full shadow-2xl shadow-gray-950 w-48'}
-                        src="/images/fireplace.jpg"
+                        src="/assets/images/fireplace.jpg"
                         alt="a cup filled with capuccino in a table"
                         width={'500'}
                         height={'300'}

@@ -30,7 +30,7 @@ const ProjectsCarousel = (props: Props) => {
             urlLink: "https://github.com/Kyori-kyo/my-portifolio",
             langs: ["TypeScript", "NextJS", "TailwindCSS"],
             titulo: "Meu portifólio",
-            imagem: "/images/profilePic.png",
+            imagem: "/assets/images/profilePic.png",
             descricao: "Meu segundo portifólio que resolvi fazer em NextJS e TailwindCSS.",
         },
 
@@ -38,7 +38,7 @@ const ProjectsCarousel = (props: Props) => {
             urlLink: "https://github.com/Ascend-Software",
             langs: ["TypeScript", "NextJS", "TailwindCSS"],
             titulo: "Ascent Software",
-            imagem: "/images/Ascent.png",
+            imagem: "/assets/images/Ascent.png",
             descricao: "Minha startup focada em ensinar e introduzir pessoas a programação, sendo uma primeira experiencia.",
         },
 
@@ -46,7 +46,7 @@ const ProjectsCarousel = (props: Props) => {
             urlLink: "https://github.com/Kyori-kyo/meu-portfolio",
             langs: ["TypeScript", "NextJS", "TailwindCSS"],
             titulo: "Meu primeiro código",
-            imagem: "/images/loguinho.png",
+            imagem: "/assets/images/loguinho.png",
             descricao: "Meu primeiro portifólio, minha primeira experiência na programação.. não é nada incrível mas foi meu primeiro passo.",
         },
     ];
