@@ -42,7 +42,7 @@ const Other = async (props: Props) => {
                         </div>
                         <div className={'flex justify-center text-center'}>
                             <Image
-                                src={'/gifs/social_dino_with_hat.gif'}
+                                src={'/assets/gifs/social_dino_with_hat.gif'}
                                 className={'rounded-md shadow-2xl shadow-gray-950'}
                                 width={300}
                                 height={300}
@@ -60,7 +60,7 @@ const Other = async (props: Props) => {
                             urlLink={repo.url}
                             langs={repo.topics}
                             titulo={repo.name}
-                            imagem={'/images/capuccinoBg.jpg'}
+                            imagem={'/assets/images/capuccinoBg.jpg'}
                             descricao={repo.description}
                         />
                     </div>
