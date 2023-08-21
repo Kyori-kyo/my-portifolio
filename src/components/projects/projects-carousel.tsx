@@ -6,7 +6,7 @@ import WorkCard from './work-card';
 import "swiper/css";
 import "swiper/css/pagination";
 import "./styles.css";
-import useWindowDimensions from "@/app/hooks/use-window-dimentions";
+import useWindowDimensions from "@/hooks/use-window-dimentions";
 
 type Props = {}
 

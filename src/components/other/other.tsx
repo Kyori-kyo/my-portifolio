@@ -2,14 +2,17 @@ import { json } from "./json";
 import FeaturedProject from "./featured-project";
 import SvgMapPin from "../svgs-components/SvgMapPin";
 import Image from 'next/image'
+import { getScopedI18n } from "@/app/locales/server";
 
 type Props = {}
 
 // const response: GitHubRepository[] = await GithubApiService('https://api.github.com/users/kyori-kyo/repos')
 
-const Other = (props: Props) => {
+const Other = async (props: Props) => {
 
+    const scopedT = await getScopedI18n('others')
     const repo = json;
+    const email = <a className={'text-orange-400 hover:underline'} href="mailto:richardlcmoreira@gmail.com">richardlcmoreira@gmail.com</a>;
 
     return (
         <section id="contact" className={'generalPageAlign md:px-32'}>
@@ -21,11 +24,13 @@ const Other = (props: Props) => {
                     <div className={'flex flex-col content-between justify-between gap-3'}>
                         <div>
                             <p className={'text-xl text-[#D0D0D0] mb-3'}>
-                                Thank you for stopping by!
+                                {scopedT('thanks')}
                             </p>
-                            <p className={''}>
-                                I had much fun building this portfolio.<br />
-                                If you have a question or just wanna get in touch.. feel free to send me an email at <a className={'text-orange-400 hover:underline'} href="mailto:richardlcmoreira@gmail.com">richardlcmoreira@gmail.com</a> or contact me at any of my social medias!
+                            <p>
+                                {scopedT('description1')}
+                            </p>
+                            <p>
+                                {scopedT('description2', { email: email })}
                             </p>
 
                             <div className={'flex justify-center gap-2 items-center ml-3 mt-5'}>

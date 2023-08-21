@@ -1,4 +1,5 @@
 "use client"
+import { useScopedI18n } from '@/app/locales/client'
 import Image from 'next/image'
 // import './page.css'
 
@@ -6,6 +7,7 @@ type Props = {}
 
 const ReadMe = (props: Props) => {
 
+    const scopedT = useScopedI18n('readme')
     const anos = new Date().getFullYear() - 2021;
     const idade = new Date().getFullYear() - 2000;
 
@@ -27,9 +29,8 @@ const ReadMe = (props: Props) => {
                         </h1>
                         <br />
                         <div className={'flex flex-col text-left text-sm md:text-lg px-10 md:px-0'}>
-                            Tenho {idade} anos e trabalho como engenheiro de software há {anos} anos. Tenho experiência atuando com o desenvolvimento web, tendo entregado diversos projetos em salesforce, e mobile, tendo feito aplicativos para falicitar a vida dos meus usuários. <br />
-                            Porém, me aventuro no mobile, IAs, cyber security e até mesmo no desenvolvimento de games.<br />
-                            Sou completamente apaixonado pelo que faço e é justamente isso o que me faz levantar todos os dias, buscar por novas tecnologias e ideias para sempre poder entregar o melhor possível.
+                            <p>{scopedT('description1', { anos, idade })}</p>
+                            <p>{scopedT('description2')}</p>
                         </div>
                     </div>
                 </div>
