@@ -21,7 +21,7 @@ const Navbar = (props: Props) => {
             <a href="#readMe" onClick={(element) => homeNavigationClick(element)} translate="no" className={'hover:scale-110 hover:text-orange-500'}>.Readme</a>
             <a href="#projects" onClick={(element) => homeNavigationClick(element)} translate="no" className={'hover:scale-110 hover:text-orange-500'}>.Projects</a>
             <a href="#contact" onClick={(element) => homeNavigationClick(element)} translate="no" className={'hover:scale-110 hover:text-orange-500'}>.Others</a>
-            {/* <a href="blog" translate="no" className={'hover:scale-110 text-orange-500 hover:text-gray-400'}>.Blog</a> */}
+            <a href="blog" translate="no" className={'hover:scale-110 text-orange-500 hover:text-gray-400'}>.Blog</a>
         </div>
     )
 }
