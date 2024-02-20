@@ -1,7 +1,7 @@
 import '@/app/globals.css'
 import { Inter } from 'next/font/google'
 import { Providers } from '../context/providers'
-import { GenerateMetadata } from '@/libs/types/metadata'
+import type { GenerateMetadata } from '@/libs/types/metadata'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,15 +27,15 @@ export const generateMetadata: GenerateMetadata = () => {
       type: "website",
       locale: "en",
       siteName: "Ríchard's Portifolio",
-      url: "/assets/images/og.png",
+      url: "https://kyori.tech",
       title: "Ríchard's Portifolio",
       description:
         "This is my portifolio, and it tells about me and my career.",
       images: [
         {
-          url: "https://richard-lucas.vercel.app/",
-          width: 1280,
-          height: 720,
+          url: "/assets/images/og.png",
+          width: 1300,
+          height: 600,
           alt: "Ríchard's Portifolio",
         },
       ],

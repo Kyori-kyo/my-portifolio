@@ -14,16 +14,23 @@ const ProjectsCarousel = () => {
     const [slidesPerView, setSlidesPerView] = useState<number>(1);
 
     useEffect(() => {
-        if (width && width > 700 && width < 1150) {
+        if (width && width > 1300 && width < 1600) {
             setSlidesPerView(2);
-        } else if (width && width > 1150) {
+        } else if (width && width > 1600) {
             setSlidesPerView(3);
-        } else if (width && width < 700) {
+        } else if (width && width < 1300) {
             setSlidesPerView(1);
         }
     }, [width]);
 
     const workCardData = [
+        {
+            urlLink: "http://kyori.tech",
+            langs: ["TypeScript", "NextJS", "TailwindCSS"],
+            titulo: "My personal portfolio",
+            imagem: "/assets/images/kyoriBackground.png",
+            descricao: "The second portfolio project I've made.. It was pretty fun to build it.",
+        },
         {
             urlLink: "http://kyori.tech",
             langs: ["TypeScript", "NextJS", "TailwindCSS"],

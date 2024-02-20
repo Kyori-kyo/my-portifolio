@@ -6,14 +6,14 @@ import { BlogPost } from "@/components/blog-components/blog-post/blog-post"
 export default function blog() {
 
     return (
-        <main className="flex flex-col border-top gap-6">
+        <main className="flex flex-col items-center border-top gap-6">
             <BlogNavbar />
-            <div className={'flex flex-col md:px-64 gap-2'}>
+            <div className={'flex flex-col w-1/3 gap-2'}>
 
                 <p className={'text-2xl border-b'}>Recent posts:</p>
                 <div className={'grid gap-5 w-full'}>
                     {
-                        blogPostJson.map((blogPost, index) => {
+                        blogPostJson.map((blogPost) => {
                             return (
                                 <BlogPost
                                     key={blogPost.id}

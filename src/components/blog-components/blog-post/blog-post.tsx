@@ -13,9 +13,11 @@ type Props = {
 
 export const BlogPost = (props: Props) => {
     return (
-        <div className={'text-black bg-slate-100 rounded-md md:rounded-xl'}>
+        <div id='pog' className={'flex flex-col text-black bg-slate-100 rounded-md md:rounded-xl '}>
 
-            <Image src={props.post_image} alt="" className={''} width={350} height={350} />
+            <div className={"relative h-64"}>
+                <Image src={props.post_image} alt="" className={'object-cover object-center w-full h-32'} fill />
+            </div>
 
             <div className={'p-5'}>
                 <div>
@@ -28,7 +30,7 @@ export const BlogPost = (props: Props) => {
                 </div>
 
                 {/* info user + data */}
-                <div className={'flex gap-3'}>
+                <div className={'gap-3'}>
                     <Image src={"/assets/images/profilePic.png"} alt="" className={'rounded-full'} width={50} height={50} />
                     <div>
                         <p>Meu nome</p>
