@@ -2,15 +2,13 @@
 import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import WorkCard from './work-card';
+import { WorkCard } from './work-card';
 import "swiper/css";
 import "swiper/css/pagination";
 import "./styles.css";
 import useWindowDimensions from "@/hooks/use-window-dimentions";
 
-type Props = {}
-
-const ProjectsCarousel = (props: Props) => {
+const ProjectsCarousel = () => {
 
     const { width } = useWindowDimensions();
     const [slidesPerView, setSlidesPerView] = useState<number>(1);
@@ -68,7 +66,7 @@ const ProjectsCarousel = (props: Props) => {
                 modules={[Pagination, Autoplay, Navigation]}
                 className={"mySwiper"}
             >
-                {workCardData.map((card, index) => (
+                {workCardData.map((card) => (
                     <SwiperSlide key={card.urlLink} className={'pb-8'}>
                         <WorkCard
 
@@ -85,4 +83,4 @@ const ProjectsCarousel = (props: Props) => {
     )
 }
 
-export default ProjectsCarousel;
+export { ProjectsCarousel };

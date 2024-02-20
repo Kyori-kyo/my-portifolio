@@ -1,5 +1,5 @@
 import { blogPostJson } from "@/app/constants/blogPostJson";
-import BlogNavbar from "@/components/blog-components/blog-navbar/blog-navbar";
+import { BlogNavbar } from "@/components/blog-components/blog-navbar/blog-navbar";
 import { BlogPost } from "@/components/blog-components/blog-post/blog-post"
 
 

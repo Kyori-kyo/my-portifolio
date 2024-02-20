@@ -11,7 +11,7 @@ type Props = {
 const WorkCard = ({ langs, titulo, imagem, descricao, urlLink }: Props) => {
     return (
         <div className={'flex'}>
-            <a href={urlLink} target='_blank' className="relative bg-cover text-gray-200 max-w-[350px] min-w-[350px] max-h-[350px] min-h-[350px] tracking-wide group overflow-hidden rounded-2xl">
+            <a href={urlLink} target='_blank' className="relative bg-cover text-gray-200 max-w-[350px] min-w-[350px] max-h-[350px] min-h-[350px] tracking-wide group overflow-hidden rounded-2xl" rel="noreferrer">
 
                 <div className="max-w-[350px] min-w-[350px] max-h-[350px] h-full flex items-end bg-gradient-to-t from-black/90 duration-500 md:translate-y-full group-hover:translate-y-0 bg-transparent absolute inset-0 z-10">
                     <div className="pb-2 px-6 rounded-[0px] text-left max-w-[350px] min-w-[350px]">
@@ -42,4 +42,4 @@ const WorkCard = ({ langs, titulo, imagem, descricao, urlLink }: Props) => {
     );
 };
 
-export default WorkCard;
+export { WorkCard };

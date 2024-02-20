@@ -1,8 +1,6 @@
-import ProjectsCarousel from './projects-carousel';
+import { ProjectsCarousel } from './projects-carousel';
 
-type Props = {}
-
-const mywork = (props: Props) => {
+const Projects = () => {
     return (
         <div id='projects' className={'generalPageAlign h-screen md:px-64 padding-left: 0rem; padding-right: 0rem;'}>
             <h1 className={'text-4xl m-5 border-b-2 border-orange-500 mb-10'}>
@@ -15,4 +13,4 @@ const mywork = (props: Props) => {
     )
 }
 
-export default mywork;
+export { Projects };

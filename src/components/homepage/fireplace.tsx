@@ -1,9 +1,7 @@
 import Image from 'next/image'
-import { getI18n, getScopedI18n } from '../../app/locales/server'
+import { getScopedI18n } from '../../app/locales/server'
 
-type Props = {}
-
-const Fireplace = async (props: Props) => {
+const Fireplace = async () => {
 
     const t = await getScopedI18n('home')
 
@@ -43,4 +41,4 @@ const Fireplace = async (props: Props) => {
     )
 }
 
-export default Fireplace;
+export { Fireplace };
