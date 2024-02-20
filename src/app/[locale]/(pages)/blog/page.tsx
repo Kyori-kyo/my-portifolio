@@ -6,7 +6,7 @@ import { BlogPost } from "@/components/blog-components/blog-post/blog-post"
 export default function blog() {
 
     return (
-        <main className="flex flex-col items-center border-top gap-6">
+        <main className="flex flex-col items-center border-top gap-6 !bg-white">
             <BlogNavbar />
             <div className={'flex flex-col w-1/3 gap-2'}>
 
