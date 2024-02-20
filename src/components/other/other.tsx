@@ -17,7 +17,7 @@ const Other = async (props: Props) => {
     const email = <a className={'text-orange-400 hover:underline'} href="mailto:richardlcmoreira@gmail.com">richardlcmoreira@gmail.com</a>;
 
     return (
-        <section id="contact" className={'generalPageAlign md:px-32'}>
+        <section id="contact" className={'generalPageAlign md:px-64'}>
             <div className={'glassMorphDiv flex flex-col justify-center items-center rounded-3xl md:py-8 md:px-16 px-4'}>
                 <h1 className="text-xl md:text-4xl border-b-2 border-orange-500 w-fit m-5 md:m-8 md:mt-0">
                     .OTHERS

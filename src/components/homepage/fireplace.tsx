@@ -9,7 +9,7 @@ const Fireplace = async (props: Props) => {
 
     return (
         <div className={'flex flex-col relative'} id="homePage">
-            <div className={'generalPageAlign gap-5 z-10 bg-black/40'}>
+            <div className={'generalPageAlign gap-5 z-10 bg-black/40 md:px-64'}>
                 <Image
                     src={'/assets/images/profilePic.png'}
                     className={'rounded-full shadow-2xl shadow-gray-950 w-48 mb-5'}
