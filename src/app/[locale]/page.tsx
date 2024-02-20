@@ -1,9 +1,9 @@
-import Navbar from '@/components/navbar/navbar'
 import Fireplace from '@/components/homepage/fireplace'
 import ReadMe from '@/components/readme/readme'
 import Projects from '@/components/projects/projects'
 import SocialMedias from '@/components/socialMedias/SocialMedias'
 import Other from '@/components/other/other'
+import Navbar from '@/components/navbar/navbar'
 
 export default function Home() {
     return (

@@ -6,6 +6,8 @@ import { getScopedI18n } from "@/app/locales/server";
 
 type Props = {}
 
+let anoAtual = new Date().getFullYear();
+
 // const response: GitHubRepository[] = await GithubApiService('https://api.github.com/users/kyori-kyo/repos')
 
 const Other = async (props: Props) => {
@@ -57,17 +59,17 @@ const Other = async (props: Props) => {
                         </p>
                         <FeaturedProject
                             key={repo.id}
-                            urlLink={repo.url}
+                            urlLink={'https://www.ascentsoftware.com.br'}
                             langs={repo.topics}
                             titulo={repo.name}
-                            imagem={'/assets/images/capuccinoBg.jpg'}
+                            imagem={'/assets/images/Ascent.png'}
                             descricao={repo.description}
                         />
                     </div>
                 </div>
 
                 <p className={'text-sm text-gray-500 my-5 md:mt-10'}>
-                    2023 - Richard Lucas
+                    {anoAtual} - made with 🧡 by Kyori
                 </p>
             </div>
         </section>

@@ -27,27 +27,27 @@ const ProjectsCarousel = (props: Props) => {
 
     const workCardData = [
         {
-            urlLink: "https://github.com/Kyori-kyo/my-portifolio",
+            urlLink: "http://kyori.tech",
             langs: ["TypeScript", "NextJS", "TailwindCSS"],
-            titulo: "Meu portifólio",
-            imagem: "/assets/images/profilePic.png",
-            descricao: "Meu segundo portifólio que resolvi fazer em NextJS e TailwindCSS.",
+            titulo: "My personal portfolio",
+            imagem: "/assets/images/kyoriBackground.png",
+            descricao: "The second portfolio project I've made.. It was pretty fun to build it.",
         },
 
         {
-            urlLink: "https://github.com/Ascend-Software",
-            langs: ["TypeScript", "NextJS", "TailwindCSS"],
+            urlLink: "https://www.ascentsoftware.com.br/",
+            langs: ["TypeScript", "NextJS", "Node.js"],
             titulo: "Ascent Software",
             imagem: "/assets/images/Ascent.png",
-            descricao: "Minha startup focada em ensinar e introduzir pessoas a programação, sendo uma primeira experiencia.",
+            descricao: "A startup that I've made so I could gain a lot of experience.",
         },
 
         {
-            urlLink: "https://github.com/Kyori-kyo/meu-portfolio",
+            urlLink: "https://kyori-kyo.github.io/meu-portfolio/",
             langs: ["TypeScript", "NextJS", "TailwindCSS"],
-            titulo: "Meu primeiro código",
-            imagem: "/assets/images/loguinho.png",
-            descricao: "Meu primeiro portifólio, minha primeira experiência na programação.. não é nada incrível mas foi meu primeiro passo.",
+            titulo: "My first line of code",
+            imagem: "/assets/images/firstPortfolio.png",
+            descricao: "It was also my first portfolio... It was SO much fun. And it really is unfinished.",
         },
     ];
 

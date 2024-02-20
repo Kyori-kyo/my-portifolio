@@ -1,5 +1,4 @@
 import '@/app/globals.css'
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Providers } from '../context/providers'
 import { GenerateMetadata } from '@/libs/types/metadata'
@@ -28,7 +27,7 @@ export const generateMetadata: GenerateMetadata = () => {
       type: "website",
       locale: "en",
       siteName: "Ríchard's Portifolio",
-      url: "https://richard-lucas.vercel.app/assets/images/og.png",
+      url: "/assets/images/og.png",
       title: "Ríchard's Portifolio",
       description:
         "This is my portifolio, and it tells about me and my career.",
@@ -48,8 +47,8 @@ export default function RootLayout({
   children,
   params
 }: {
-  children: React.ReactNode;
-  params: { locale: string };
+  readonly children: React.ReactNode;
+  readonly params: { readonly locale: string };
 }) {
   return (
     <html lang="en">

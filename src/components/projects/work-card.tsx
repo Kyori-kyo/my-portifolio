@@ -33,9 +33,9 @@ const WorkCard = ({ langs, titulo, imagem, descricao, urlLink }: Props) => {
                 <Image
                     src={imagem}
                     alt=""
-                    height={350}
-                    width={350}
-                    className="pointer-events-none"
+                    className={'pointer-events-none'}
+                    height={1350}
+                    width={1350}
                 />
             </a>
         </div>
