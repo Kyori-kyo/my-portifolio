@@ -52,7 +52,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" href="assets/images/fireplace.jpg" sizes="any" />
       <body className={inter.className}>
         <Providers locale={params.locale}>
           {children}

@@ -31,13 +31,6 @@ const ProjectsCarousel = () => {
             imagem: "/assets/images/kyoriBackground.png",
             descricao: "The second portfolio project I've made.. It was pretty fun to build it.",
         },
-        {
-            urlLink: "http://kyori.tech",
-            langs: ["TypeScript", "NextJS", "TailwindCSS"],
-            titulo: "My personal portfolio",
-            imagem: "/assets/images/kyoriBackground.png",
-            descricao: "The second portfolio project I've made.. It was pretty fun to build it.",
-        },
 
         {
             urlLink: "https://www.ascentsoftware.com.br/",
