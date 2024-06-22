@@ -1,4 +1,6 @@
 import Image from 'next/image';
+import { Suspense } from 'react';
+import { SvgNordicLoading } from '../svgs-components/SvgNordicLoading';
 
 type Props = {
     urlLink: string;
@@ -29,14 +31,15 @@ const WorkCard = ({ langs, titulo, imagem, descricao, urlLink }: Props) => {
                         </div>
                     </div>
                 </div>
-
-                <Image
-                    src={imagem}
-                    alt=""
-                    className={'pointer-events-none'}
-                    height={1350}
-                    width={1350}
-                />
+                <Suspense fallback={<SvgNordicLoading />}>
+                    <Image
+                        src={imagem}
+                        alt=""
+                        className={'pointer-events-none'}
+                        height={1350}
+                        width={1350}
+                    />
+                </Suspense>
             </a>
         </div>
     );
