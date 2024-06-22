@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
     --foreground-rgb: 175, 175, 175;
     --background-start-rgb: 15, 15, 15;
@@ -20,9 +18,7 @@
 
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom,
-            transparent,
-            rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+    background: rgb(var(--background-start-rgb));
 }
 
 /* ================== global uses ==================== */
@@ -93,7 +89,7 @@ body {
     margin: 0 auto;
     letter-spacing: .15em;
     animation:
-        typing 5s steps(100, end),
+        typing 3s steps(100, end),
         blink-caret .75s step-end infinite;
 }
 

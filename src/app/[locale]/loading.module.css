@@ -1,0 +1,580 @@
+:root .bodyDesign{
+  --hue: 223;
+  --bg: hsl(var(--hue),10%,90%);
+  --fg: hsl(var(--hue),10%,10%);
+  --red: hsl(3,90%,50%);
+  --orange: hsl(33,90%,50%);
+  --yellow: hsl(48,90%,50%);
+  --green: hsl(123,90%,40%);
+  --cyan: hsl(183,90%,40%);
+  --blue: hsl(243,90%,50%);
+  --purple: hsl(273,90%,50%);
+  --trans-dur: 0.3s;
+  font-size: calc(14px + (60 - 14) * (100vw - 280px) / (3840 - 280));
+  --bg: hsl(var(--hue),10%,10%);
+  --fg: hsl(var(--hue),10%,90%);
+}
+
+body .bodyDesign {
+  background-color: var(--bg);
+  color: var(--fg);
+  display: flex;
+  font: 1em/1.5 sans-serif;
+  transition: background-color var(--trans-dur), color var(--trans-dur);
+}
+
+.mainDesign {
+  margin: auto;
+  padding: 1.5em 0;
+}
+
+.tetris {
+  animation-name: bounce;
+  position: relative;
+  width: 10em;
+  height: 10.5em;
+}
+.tetris:after {
+  background-color: hsl(var(--hue), 10%, 70%);
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5em;
+  transition: background-color var(--trans-dur);
+}
+.tetris, .tetris__block, .tetris__block_cell {
+  animation-duration: 4s;
+  animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+  animation-iteration-count: infinite;
+}
+.tetris__block {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 1em 1em;
+}
+.tetris__block_cell {
+  border: 0.25em solid rgba(0, 0, 0, 0);
+  border-top-color: rgba(255, 255, 255, 0.3);
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  border-left-color: rgba(255, 255, 255, 0.1);
+}
+.tetris__block_cell:nth-child(1) {
+  grid-area: a;
+}
+.tetris__block_cell:nth-child(2) {
+  grid-area: b;
+}
+.tetris__block_cell:nth-child(3) {
+  grid-area: c;
+}
+.tetris__block_cell:nth-child(4) {
+  grid-area: d;
+}
+.tetris__block__1 {
+  animation-name: block1;
+  grid-template-areas: "x a" "x b" "c d";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 2em;
+  height: 3em;
+  transform: translate(7em, 7em);
+}
+.tetris__block__1 .tetris__block_cell {
+  animation-name: block1-borders;
+  background-color: var(--blue);
+}
+.tetris__block__2 {
+  animation-name: block2;
+  grid-template-areas: "a b c d";
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  width: 4em;
+  height: 1em;
+  transform: translate(0em, 9em);
+}
+.tetris__block__2 .tetris__block_cell {
+  background-color: var(--cyan);
+}
+.tetris__block__3 {
+  animation-name: block3;
+  grid-template-areas: "x a b" "c d y";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 3em;
+  height: 2em;
+  transform: translate(5em, 8em);
+}
+.tetris__block__3 .tetris__block_cell {
+  background-color: var(--green);
+}
+.tetris__block__4 {
+  animation-name: block4;
+  grid-template-areas: "a b" "c d";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 2em;
+  height: 2em;
+  transform: translate(1em, 7em);
+}
+.tetris__block__4 .tetris__block_cell {
+  background-color: var(--yellow);
+}
+.tetris__block__5 {
+  animation-name: block5;
+  grid-template-areas: "a x" "b c" "d y";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 2em;
+  height: 3em;
+  transform: translate(4em, 7em);
+}
+.tetris__block__5 .tetris__block_cell {
+  animation-name: block5-borders;
+  background-color: var(--purple);
+}
+.tetris__block__6 {
+  animation-name: block6;
+  grid-template-areas: "a b x" "y c d";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 3em;
+  height: 2em;
+  transform: translate(4em, 6em);
+}
+.tetris__block__6 .tetris__block_cell {
+  background-color: var(--red);
+}
+.tetris__block__7 {
+  animation-name: block7;
+  grid-template-areas: "a b" "x c" "x d";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 2em;
+  height: 3em;
+  transform: translate(2em, 6em);
+}
+.tetris__block__7 .tetris__block_cell {
+  animation-name: block7-borders;
+  background-color: var(--orange);
+}
+.tetris__block__8 {
+  animation-name: block8;
+  grid-template-areas: "a b c" "x d y";
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 3em;
+  height: 2em;
+  transform: translate(6em, 6em);
+}
+.tetris__block__8 .tetris__block_cell {
+  animation-name: block8-borders;
+  background-color: var(--purple);
+}
+.tetris__block__9 {
+  animation-name: block9;
+  grid-template-areas: "a b" "c x" "d x";
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 2em;
+  height: 3em;
+  transform: translate(0em, 6em);
+}
+.tetris__block__9 .tetris__block_cell {
+  animation-name: block9-borders;
+  background-color: var(--blue);
+}
+.tetris__block__10 {
+  animation-name: block10;
+  grid-template-areas: "a" "b" "c" "d";
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  width: 1em;
+  height: 4em;
+  transform: translate(9em, 6em);
+}
+.tetris__block__10 .tetris__block_cell {
+  animation-name: block10-borders;
+  background-color: var(--cyan);
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+
+  .tetris:after {
+    background-color: hsl(var(--hue), 10%, 30%);
+  }
+}
+/* Animations */
+@keyframes bounce {
+  from, 96%, to {
+    animation-timing-function: linear;
+    transform: translate(0, 0);
+  }
+  98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    transform: translate(0, 1em);
+  }
+}
+@keyframes block1 {
+  from {
+    transform: translate(5em, 0) rotate(90deg);
+  }
+  3.2% {
+    transform: translate(7em, 0) rotate(90deg);
+  }
+  6.4% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate(7em, 0) rotate(0);
+  }
+  9.6%, 98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 1;
+    transform: translate(7em, 7em) rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(7em, 7em) rotate(0);
+  }
+}
+@keyframes block1-borders {
+  from, 3.2% {
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.3);
+  }
+  6.4%, to {
+    border-top-color: rgba(255, 255, 255, 0.3);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+  }
+}
+@keyframes block2 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+    transform: translate(3em, 0);
+  }
+  9.6% {
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    visibility: visible;
+    transform: translate(3em, 0);
+  }
+  12.8% {
+    transform: translate(0, 0);
+  }
+  16% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate(0, 1em);
+  }
+  19.2%, 98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 1;
+    transform: translate(0, 9em);
+  }
+  to {
+    opacity: 0;
+    transform: translate(0, 9em);
+  }
+}
+@keyframes block3 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+    transform: translate(4em, 0);
+  }
+  19.2% {
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    visibility: visible;
+    transform: translate(4em, 0);
+  }
+  22.4% {
+    transform: translate(5em, 0);
+  }
+  25.6% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate(5em, 1em);
+  }
+  28.8%, 98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 1;
+    transform: translate(5em, 8em);
+  }
+  to {
+    opacity: 0;
+    transform: translate(5em, 8em);
+  }
+}
+@keyframes block4 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+    transform: translate(5em, 0);
+  }
+  28.8% {
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    visibility: visible;
+    transform: translate(5em, 0);
+  }
+  32% {
+    transform: translate(0, 0);
+  }
+  35.2% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate(1em, 0);
+  }
+  38.4%, 98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 1;
+    transform: translate(1em, 7em);
+  }
+  to {
+    opacity: 0;
+    transform: translate(1em, 7em);
+  }
+}
+@keyframes block5 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+    transform: translate(5em, 0) rotate(90deg);
+  }
+  38.4% {
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    visibility: visible;
+    transform: translate(5em, 0) rotate(90deg);
+  }
+  41.6% {
+    transform: translate(4em, 0) rotate(90deg);
+  }
+  44.8% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate(4em, 0) rotate(0);
+  }
+  48%, 98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 1;
+    transform: translate(4em, 7em) rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(4em, 7em) rotate(0);
+  }
+}
+@keyframes block5-borders {
+  from, 41.6% {
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.3);
+  }
+  44.8%, to {
+    border-top-color: rgba(255, 255, 255, 0.3);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+  }
+}
+@keyframes block6 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+    transform: translate(4em, 0);
+  }
+  48% {
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    visibility: visible;
+    transform: translate(4em, 0);
+  }
+  51.2% {
+    transform: translate(5em, 0);
+  }
+  54.4% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate(4em, 0);
+  }
+  57.6%, 98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 1;
+    transform: translate(4em, 6em);
+  }
+  to {
+    opacity: 0;
+    transform: translate(4em, 6em);
+  }
+}
+@keyframes block7 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+    transform: translate(6em, 0) rotate(90deg);
+  }
+  57.6% {
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    visibility: visible;
+    transform: translate(6em, 0) rotate(90deg);
+  }
+  60.8% {
+    transform: translate(2em, 0) rotate(90deg);
+  }
+  64% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate(2em, 0) rotate(0);
+  }
+  67.2%, 98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 1;
+    transform: translate(2em, 6em) rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(2em, 6em) rotate(0);
+  }
+}
+@keyframes block7-borders {
+  from, 60.8% {
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.3);
+  }
+  64%, to {
+    border-top-color: rgba(255, 255, 255, 0.3);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+  }
+}
+@keyframes block8 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+    transform: translate(5em, 0) rotate(180deg);
+  }
+  67.2% {
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    visibility: visible;
+    transform: translate(5em, 0) rotate(180deg);
+  }
+  70.4% {
+    transform: translate(6em, 0) rotate(180deg);
+  }
+  73.6% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate(6em, 0) rotate(0);
+  }
+  76.8%, 98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 1;
+    transform: translate(6em, 6em) rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(6em, 6em) rotate(0);
+  }
+}
+@keyframes block8-borders {
+  from, 70.4% {
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-right-color: rgba(255, 255, 255, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+    border-left-color: rgba(0, 0, 0, 0.1);
+  }
+  73.6%, to {
+    border-top-color: rgba(255, 255, 255, 0.3);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+  }
+}
+@keyframes block9 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+    transform: translate(4em, 0) rotate(-90deg);
+  }
+  76.8% {
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    visibility: visible;
+    transform: translate(4em, 0) rotate(-90deg);
+  }
+  80% {
+    transform: translate(3em, 0) rotate(0);
+  }
+  83.2% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate(0, 0) rotate(0);
+  }
+  86.4%, 98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 1;
+    transform: translate(0, 6em) rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(0, 6em) rotate(0);
+  }
+}
+@keyframes block9-borders {
+  from, 76.8% {
+    border-top-color: rgba(255, 255, 255, 0.1);
+    border-right-color: rgba(255, 255, 255, 0.3);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-left-color: rgba(0, 0, 0, 0.1);
+  }
+  80%, to {
+    border-top-color: rgba(255, 255, 255, 0.3);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+  }
+}
+@keyframes block10 {
+  from {
+    animation-timing-function: steps(1, end);
+    visibility: hidden;
+    transform: translate(5em, 0) rotate(90deg);
+  }
+  86.4% {
+    animation-timing-function: cubic-bezier(0.65, 0, 0.35, 1);
+    visibility: visible;
+    transform: translate(5em, 0) rotate(90deg);
+  }
+  89.6% {
+    transform: translate(9em, 0) rotate(0);
+  }
+  92.8% {
+    animation-timing-function: cubic-bezier(0.32, 0, 0.67, 0);
+    transform: translate(9em, 0) rotate(0);
+  }
+  96%, 98% {
+    animation-timing-function: cubic-bezier(0.33, 1, 0.68, 1);
+    opacity: 1;
+    transform: translate(9em, 6em) rotate(0);
+  }
+  to {
+    opacity: 0;
+    transform: translate(9em, 6em) rotate(0);
+  }
+}
+@keyframes block10-borders {
+  from, 86.4% {
+    border-top-color: rgba(0, 0, 0, 0.1);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(255, 255, 255, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.3);
+  }
+  89.6%, to {
+    border-top-color: rgba(255, 255, 255, 0.3);
+    border-right-color: rgba(0, 0, 0, 0.1);
+    border-bottom-color: rgba(0, 0, 0, 0.1);
+    border-left-color: rgba(255, 255, 255, 0.1);
+  }
+}
