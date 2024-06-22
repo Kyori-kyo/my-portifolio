@@ -3,7 +3,7 @@ export default {
     hi: "Hi",
     me: "Im {name}",
     description:
-      "A software engineer who loves to work with games, AIs, websites and applications.",
+      "A Sr. Software Engineer who just loves to code",
     email: "You can contact me on my ",
   },
   readme: {

@@ -5,9 +5,7 @@ import { SocialMedias } from '@/components/socialMedias/SocialMedias'
 import { Other } from '@/components/other/other'
 import { Navbar } from '@/components/navbar/navbar'
 
-export default async function Home() {
-    await new Promise(resolve => setTimeout(resolve, 5000));
-
+export default function Home() {
     return (
         <main className="flex flex-col">
             <Navbar />
@@ -18,4 +16,5 @@ export default async function Home() {
             <Other />
         </main>
     )
+
 }

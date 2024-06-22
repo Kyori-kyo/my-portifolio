@@ -1,10 +1,10 @@
 'use client'
+import SvgMail from '../svgs-components/SvgMail'
 import SvgGithub from '../svgs-components/SvgGithub'
 import SvgTwitter from '../svgs-components/SvgTwitter'
 import SvgLinkedIn from '../svgs-components/SvgLinkedIn'
 import { useState } from 'react'
 import { clsx } from 'clsx';
-import SvgMail from '../svgs-components/SvgMail'
 
 const SocialMedias = () => {
 	const [submenuVisible, setSubmenuVisible] = useState(true);

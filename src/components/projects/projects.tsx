@@ -1,4 +1,6 @@
+import { SvgNordicLoading } from '../svgs-components/SvgNordicLoading';
 import { ProjectsCarousel } from './projects-carousel';
+import { Suspense } from 'react';
 
 const Projects = () => {
     return (
@@ -7,7 +9,9 @@ const Projects = () => {
                 .PROJECTS
             </h1>
             <div className='w-full'>
-                <ProjectsCarousel />
+                <Suspense fallback={<SvgNordicLoading />}>
+                    <ProjectsCarousel />
+                </Suspense>
             </div>
         </div>
     )
