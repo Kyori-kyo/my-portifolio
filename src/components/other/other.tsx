@@ -3,6 +3,7 @@ import FeaturedProject from "./featured-project";
 import SvgMapPin from "../svgs-components/SvgMapPin";
 import Image from "next/image";
 import { getScopedI18n } from "@/app/locales/server";
+import { WorkCard } from "../projects/work-card";
 
 const anoAtual = new Date().getFullYear();
 
@@ -63,14 +64,15 @@ const Other = async () => {
                         <p className={"border-b-2 border-orange-500 w-fit ml-3"}>
                             Featured project
                         </p>
-                        <FeaturedProject
-                            key={repo.id}
-                            urlLink={"https://www.ascentsoftware.com.br"}
-                            langs={repo.topics}
-                            titulo={repo.name}
-                            imagem={"/assets/images/Ascent.png"}
-                            descricao={repo.description}
-                        />
+                        <div className={" w-[40rem]"}>
+                            <WorkCard
+                                urlLink={"https://nexus.kyori.tech/"}
+                                langs={["TypeScript", "NextJS", "Node.js"]}
+                                titulo={"Nexus"}
+                                imagem={"/assets/images/nexus.jpeg"}
+                                descricao={"Another one of Kyori's projects. This one was our first SAAS and is going to be used to build our first CRM."}
+                            />
+                        </div>
                     </div>
                 </div>
 

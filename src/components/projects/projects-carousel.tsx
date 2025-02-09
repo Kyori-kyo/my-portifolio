@@ -14,7 +14,7 @@ const ProjectsCarousel = () => {
         },
 
         {
-            urlLink: "https://www.kyori.tech.com/",
+            urlLink: "https://kyori.tech/",
             langs: ["TypeScript", "NextJS", "Node.js"],
             titulo: "Kyori Tech",
             imagem: "/assets/images/kyori.jpeg",
@@ -22,7 +22,7 @@ const ProjectsCarousel = () => {
         },
 
         {
-            urlLink: "https://www.slate.kyori.tech.com/",
+            urlLink: "https://slate.kyori.tech/",
             langs: ["TypeScript", "NextJS", "Node.js"],
             titulo: "Slate",
             imagem: "/assets/images/slate.jpeg",
@@ -30,7 +30,7 @@ const ProjectsCarousel = () => {
         },
 
         {
-            urlLink: "https://www.nexus.kyori.tech.com/",
+            urlLink: "https://nexus.kyori.tech/",
             langs: ["TypeScript", "NextJS", "Node.js"],
             titulo: "Nexus",
             imagem: "/assets/images/nexus.jpeg",
