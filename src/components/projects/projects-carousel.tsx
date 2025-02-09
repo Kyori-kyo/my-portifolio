@@ -1,84 +1,68 @@
 "use client";
-import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { WorkCard } from './work-card';
-import "swiper/css";
-import "swiper/css/pagination";
-import "./styles.css";
-import useWindowDimensions from "@/hooks/use-window-dimentions";
+import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 
 const ProjectsCarousel = () => {
-
-    const { width } = useWindowDimensions();
-    const [slidesPerView, setSlidesPerView] = useState<number>(1);
-
-    useEffect(() => {
-        if (width && width > 1300 && width < 1600) {
-            setSlidesPerView(2);
-        } else if (width && width > 1600) {
-            setSlidesPerView(3);
-        } else if (width && width < 1300) {
-            setSlidesPerView(1);
-        }
-    }, [width]);
 
     const workCardData = [
         {
             urlLink: "http://kyori.tech",
             langs: ["TypeScript", "NextJS", "TailwindCSS"],
             titulo: "My personal portfolio",
-            imagem: "/assets/images/kyoriBackground.png",
-            descricao: "The second portfolio project I've made.. It was pretty fun to build it.",
+            imagem: "/assets/images/portfolio.jpeg",
+            descricao: "My first experience with next.js and tailwindcss. I'm really proud of it.",
         },
 
         {
-            urlLink: "https://www.ascentsoftware.com.br/",
+            urlLink: "https://www.kyori.tech.com/",
             langs: ["TypeScript", "NextJS", "Node.js"],
-            titulo: "Ascent Software",
-            imagem: "/assets/images/Ascent.png",
-            descricao: "A startup that I've made so I could gain a lot of experience.",
+            titulo: "Kyori Tech",
+            imagem: "/assets/images/kyori.jpeg",
+            descricao: "My little startup. Created so me and my friends could develop some big projects together but the outcome was so good that we kept it till today.",
+        },
+
+        {
+            urlLink: "https://www.slate.kyori.tech.com/",
+            langs: ["TypeScript", "NextJS", "Node.js"],
+            titulo: "Slate",
+            imagem: "/assets/images/slate.jpeg",
+            descricao: "One of Kyori's projects. The idea is to help people to learn programming, get better at it and prepare for interviews.",
+        },
+
+        {
+            urlLink: "https://www.nexus.kyori.tech.com/",
+            langs: ["TypeScript", "NextJS", "Node.js"],
+            titulo: "Nexus",
+            imagem: "/assets/images/nexus.jpeg",
+            descricao: "Another one of Kyori's projects. This one was our first SAAS and is going to be used to build our first CRM.",
         },
 
         {
             urlLink: "https://kyori-kyo.github.io/meu-portfolio/",
             langs: ["TypeScript", "NextJS", "TailwindCSS"],
-            titulo: "My first line of code",
-            imagem: "/assets/images/firstPortfolio.png",
-            descricao: "It was also my first portfolio... It was SO much fun. And it really is unfinished.",
+            titulo: "My first web project",
+            imagem: "/assets/images/primeiro_projeto.jpeg",
+            descricao: "It was SO much fun that I'm working with web development untill today. It's not the most beautiful thing you have seen out there but it was my start point and I'm really proud of it.",
         },
     ];
 
     return (
         <div>
-            <Swiper
-                spaceBetween={30}
-                slidesPerView={slidesPerView}
-                pagination={{
-                    clickable: true,
-                }}
-                autoplay={{
-                    delay: 5000,
-                    disableOnInteraction: false,
-                }}
-                loop={true}
-                navigation={true}
-                modules={[Pagination, Autoplay, Navigation]}
-                className={"mySwiper"}
-            >
-                {workCardData.map((card) => (
-                    <SwiperSlide key={card.urlLink} className={'pb-8'}>
-                        <WorkCard
-
-                            urlLink={card.urlLink}
-                            langs={card.langs}
-                            titulo={card.titulo}
-                            imagem={card.imagem}
-                            descricao={card.descricao}
-                        />
-                    </SwiperSlide>
-                ))}
-            </Swiper>
+            <Carousel>
+                <CarouselContent className="-ml-2 md:-ml-4">
+                    {workCardData.map((card) => (
+                        <CarouselItem key={card.urlLink} className="pl-2 md:pl-4">
+                            <WorkCard
+                                urlLink={card.urlLink}
+                                langs={card.langs}
+                                titulo={card.titulo}
+                                imagem={card.imagem}
+                                descricao={card.descricao}
+                            />
+                        </CarouselItem>
+                    ))}
+                </CarouselContent>
+            </Carousel>
         </div>
     )
 }
