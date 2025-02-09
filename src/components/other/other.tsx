@@ -64,15 +64,13 @@ const Other = async () => {
                         <p className={"border-b-2 border-orange-500 w-fit ml-3"}>
                             Featured project
                         </p>
-                        <div className={" w-[40rem]"}>
-                            <WorkCard
-                                urlLink={"https://nexus.kyori.tech/"}
-                                langs={["TypeScript", "NextJS", "Node.js"]}
-                                titulo={"Nexus"}
-                                imagem={"/assets/images/nexus.jpeg"}
-                                descricao={"Another one of Kyori's projects. This one was our first SAAS and is going to be used to build our first CRM."}
-                            />
-                        </div>
+                        <WorkCard
+                            urlLink={"https://nexus.kyori.tech/"}
+                            langs={["TypeScript", "NextJS", "Node.js"]}
+                            titulo={"Nexus"}
+                            imagem={"/assets/images/nexus.jpeg"}
+                            descricao={"Another one of Kyori's projects. This one was our first SAAS and is going to be used to build our first CRM."}
+                        />
                     </div>
                 </div>
 

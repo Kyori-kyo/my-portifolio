@@ -9,7 +9,7 @@ const ReadMe = () => {
     const idade = new Date().getFullYear() - 2000;
 
     return (
-        <div id="readme" className={"flex flex-col md:justify-center pt-14 md:pt-0 content-center items-center gap-10 h-screen md:px-64"}>
+        <div id="readme" className={"flex flex-col md:justify-center mt-96 md:pt-0 content-center items-center gap-10 md:px-64"}>
             <section className={'flex flex-col justify-center items-center gap-10'}>
                 <div className={'flex flex-col md:flex-row md:gap-10 justify-center items-center glassMorphDiv md:rounded-3xl py-8 md:py-12 md:px-10 mt-14 md:mt-0'}>
                     <Image

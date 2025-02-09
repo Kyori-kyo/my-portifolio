@@ -6,9 +6,7 @@ const Projects = () => {
             <h1 className={'text-4xl m-5 border-b-2 border-orange-500 mb-10'}>
                 .PROJECTS
             </h1>
-            <div className='w-full'>
-                <ProjectsCarousel />
-            </div>
+            <ProjectsCarousel />
         </div>
     )
 }

@@ -1,9 +1,14 @@
 "use client";
 import { WorkCard } from './work-card';
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "../ui/carousel";
 
 const ProjectsCarousel = () => {
-
     const workCardData = [
         {
             urlLink: "http://kyori.tech",
@@ -12,7 +17,6 @@ const ProjectsCarousel = () => {
             imagem: "/assets/images/portfolio.jpeg",
             descricao: "My first experience with next.js and tailwindcss. I'm really proud of it.",
         },
-
         {
             urlLink: "https://kyori.tech/",
             langs: ["TypeScript", "NextJS", "Node.js"],
@@ -20,7 +24,6 @@ const ProjectsCarousel = () => {
             imagem: "/assets/images/kyori.jpeg",
             descricao: "My little startup. Created so me and my friends could develop some big projects together but the outcome was so good that we kept it till today.",
         },
-
         {
             urlLink: "https://slate.kyori.tech/",
             langs: ["TypeScript", "NextJS", "Node.js"],
@@ -28,7 +31,6 @@ const ProjectsCarousel = () => {
             imagem: "/assets/images/slate.jpeg",
             descricao: "One of Kyori's projects. The idea is to help people to learn programming, get better at it and prepare for interviews.",
         },
-
         {
             urlLink: "https://nexus.kyori.tech/",
             langs: ["TypeScript", "NextJS", "Node.js"],
@@ -36,7 +38,6 @@ const ProjectsCarousel = () => {
             imagem: "/assets/images/nexus.jpeg",
             descricao: "Another one of Kyori's projects. This one was our first SAAS and is going to be used to build our first CRM.",
         },
-
         {
             urlLink: "https://kyori-kyo.github.io/meu-portfolio/",
             langs: ["TypeScript", "NextJS", "TailwindCSS"],
@@ -47,11 +48,17 @@ const ProjectsCarousel = () => {
     ];
 
     return (
-        <div>
-            <Carousel>
+        <div className="flex w-full justify-center">
+            <Carousel
+                opts={{ align: "center" }}
+                className="w-full max-w-[90rem]"
+            >
                 <CarouselContent className="-ml-2 md:-ml-4">
                     {workCardData.map((card) => (
-                        <CarouselItem key={card.urlLink} className="pl-2 md:pl-4">
+                        <CarouselItem
+                            key={card.urlLink}
+                            className="pl-2 md:pl-4 flex items-center justify-center"
+                        >
                             <WorkCard
                                 urlLink={card.urlLink}
                                 langs={card.langs}
@@ -62,9 +69,11 @@ const ProjectsCarousel = () => {
                         </CarouselItem>
                     ))}
                 </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
             </Carousel>
         </div>
-    )
-}
+    );
+};
 
 export { ProjectsCarousel };
