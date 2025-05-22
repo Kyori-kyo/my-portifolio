@@ -1,8 +1,8 @@
 export const json = {
   id: 658462404,
   node_id: 'R_kgDOJz9WxA',
-  name: 'Nexus',
-  full_name: 'Kyori-kyo/Nexus',
+  name: 'Kyori-kyo',
+  full_name: 'Kyori-kyo/Kyori-kyo',
   private: false,
   owner: {
     login: 'Kyori-kyo',

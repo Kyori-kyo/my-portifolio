@@ -33,7 +33,7 @@ const Fireplace = async () => {
             </div>
 
             <div id="Fireplace" className={'w-full h-screen overflow-hidden absolute'}>
-                <video className="w-full h-full object-cover" disableRemotePlayback disablePictureInPicture autoPlay loop muted plays-inline>
+                <video className="w-full h-full object-cover" disableRemotePlayback disablePictureInPicture autoPlay loop muted plays-inline >
                     <source className="" src="assets/videos/fireplaceOverSea.mp4" type="video/mp4" />
                 </video>
             </div>

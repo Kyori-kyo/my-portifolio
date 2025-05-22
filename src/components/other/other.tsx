@@ -65,11 +65,11 @@ const Other = async () => {
                             Featured project
                         </p>
                         <WorkCard
-                            urlLink={"https://nexus.kyori.tech/"}
+                            urlLink={"https://slate.kyori.tech/"}
                             langs={["TypeScript", "NextJS", "Node.js"]}
-                            titulo={"Nexus"}
-                            imagem={"/assets/images/nexus.jpeg"}
-                            descricao={"Another one of Kyori's projects. This one was our first SAAS and is going to be used to build our first CRM."}
+                            titulo={"Slate"}
+                            imagem={"/assets/images/slate.jpeg"}
+                            descricao={"Our actual main project. A social app to teach and learn."}
                         />
                     </div>
                 </div>

@@ -32,13 +32,6 @@ const ProjectsCarousel = () => {
             descricao: "One of Kyori's projects. The idea is to help people to learn programming, get better at it and prepare for interviews.",
         },
         {
-            urlLink: "https://nexus.kyori.tech/",
-            langs: ["TypeScript", "NextJS", "Node.js"],
-            titulo: "Nexus",
-            imagem: "/assets/images/nexus.jpeg",
-            descricao: "Another one of Kyori's projects. This one was our first SAAS and is going to be used to build our first CRM.",
-        },
-        {
             urlLink: "https://kyori-kyo.github.io/meu-portfolio/",
             langs: ["TypeScript", "NextJS", "TailwindCSS"],
             titulo: "My first web project",
