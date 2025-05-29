@@ -30,9 +30,9 @@ const WorkCard = ({ langs, titulo, imagem, descricao, urlLink }: Props) => {
 					</h3>
 					<p className="mt-2 text-sm text-gray-200">{descricao}</p>
 					<div className="mt-3 flex flex-wrap gap-2">
-						{langs.map((lang, idx) => (
+						{langs.map((lang) => (
 							<span
-								key={idx}
+								key={lang}
 								className="bg-gray-700 text-xs text-white px-2 py-1 rounded-full"
 							>
 								{lang}

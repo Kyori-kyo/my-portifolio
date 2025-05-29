@@ -43,18 +43,20 @@ export const generateMetadata: GenerateMetadata = () => {
 	};
 };
 
-export default function RootLayout({
+export default async function RootLayout({
 	children,
 	params,
 }: {
 	readonly children: React.ReactNode;
-	readonly params: { readonly locale: string };
+	readonly params: Promise<{ readonly locale: string }>;
 }) {
+	const { locale } = await params;
+
 	return (
 		<html lang="en">
-			<link rel="icon" href="assets/images/fireplace.jpg" sizes="any" />
+			<link rel="icon" href="/assets/images/fireplace.jpg" sizes="any" />
 			<body className={inter.className}>
-				<Providers locale={params.locale}>{children}</Providers>
+				<Providers locale={locale}>{children}</Providers>
 			</body>
 		</html>
 	);

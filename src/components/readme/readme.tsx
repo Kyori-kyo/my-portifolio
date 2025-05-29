@@ -11,7 +11,7 @@ const ReadMe = () => {
 		<div
 			id="readme"
 			className={
-				"flex flex-col md:justify-center mt-96 md:pt-0 content-center items-center gap-10 md:px-64"
+				"flex flex-col md:justify-center mt-96 md:pt-0 content-center items-center gap-10 md:px-[15%]"
 			}
 		>
 			<section className={"flex flex-col justify-center items-center gap-10"}>

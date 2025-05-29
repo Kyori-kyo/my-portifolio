@@ -2,7 +2,7 @@ import { blogPostJson } from "@/app/constants/blogPostJson";
 import { BlogNavbar } from "@/components/blog-components/blog-navbar/blog-navbar";
 import { BlogPost } from "@/components/blog-components/blog-post/blog-post";
 
-export default function blog() {
+export default function Blog() {
 	return (
 		<main className="flex flex-col items-center border-top gap-6">
 			<BlogNavbar />

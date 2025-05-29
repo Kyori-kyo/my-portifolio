@@ -87,7 +87,13 @@ export interface GitHubRepository {
 	archived: boolean;
 	disabled: boolean;
 	open_issues_count: number;
-	license: any; // Update this to a more specific type if you have information about the license object
+	license: {
+		key: string;
+		name: string;
+		spdx_id: string | null;
+		url: string | null;
+		node_id: string;
+	} | null;
 	allow_forking: boolean;
 	is_template: boolean;
 	web_commit_signoff_required: boolean;

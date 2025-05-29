@@ -1,15 +1,21 @@
 import React from "react";
 
-type Props = {};
+interface Props {
+	className?: string;
+	"aria-label"?: string;
+}
 
-const SvgMail = (props: Props) => {
+const SvgMail = ({ className, "aria-label": ariaLabel, ...props }: Props) => {
 	return (
-		<div className={"bg-[#000] rounded-full p-2.5"}>
+		<div className={className || "bg-[#000] rounded-full p-2.5"}>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
 				width="28"
 				height="28"
 				viewBox="0 0 28 28"
+				aria-label={ariaLabel || "Email"}
+				role="img"
+				{...props}
 			>
 				<path
 					fill="currentColor"

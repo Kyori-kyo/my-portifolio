@@ -1,14 +1,29 @@
 import React from "react";
 
-type Props = {};
+interface Props {
+	className?: string;
+	"aria-label"?: string;
+	width?: string | number;
+	height?: string | number;
+}
 
-const SvgMapPin = (props: Props) => {
+const SvgMapPin = ({
+	className,
+	"aria-label": ariaLabel,
+	width = "25",
+	height = "25",
+	...props
+}: Props) => {
 	return (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
-			width="25"
-			height="25"
+			width={width}
+			height={height}
 			viewBox="0 0 100 100"
+			aria-label={ariaLabel || "Map Pin"}
+			role="img"
+			className={className}
+			{...props}
 		>
 			<path
 				fill="currentColor"
