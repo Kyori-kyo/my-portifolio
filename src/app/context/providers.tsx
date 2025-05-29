@@ -2,14 +2,11 @@
 import { I18nProviderClient } from "../locales/client";
 
 export function Providers({
-    children,
-    locale,
+	children,
+	locale,
 }: {
-    children: React.ReactNode;
-    locale: string;
+	children: React.ReactNode;
+	locale: string;
 }) {
-
-    return (
-        <I18nProviderClient locale={locale}>{children}</I18nProviderClient>
-    );
+	return <I18nProviderClient locale={locale}>{children}</I18nProviderClient>;
 }

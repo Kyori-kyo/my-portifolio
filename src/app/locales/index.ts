@@ -1,6 +1,6 @@
 export const locales = {
-  en: () => import("@/app/locales/en"),
-  pt: () => import("@/app/locales/pt"),
+	en: () => import("@/app/locales/en"),
+	pt: () => import("@/app/locales/pt"),
 } as const;
 
 type LocalesKeys = keyof typeof locales;
