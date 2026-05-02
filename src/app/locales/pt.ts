@@ -1,21 +1,45 @@
 export default {
-	home: {
-		hi: "Olá",
-		me: "Eu sou {name}",
-		description:
-			"Um engenheiro de software que ama trabalhar com jogos, IAs, sites e aplicações.",
-		email: "Você pode me contatar no meu ",
+	hero: {
+		label: "Consultor Salesforce",
+		title: "Ríchard Lucas",
+		name_highlight: "C. Moreira",
+		subtitle: "Desenvolvedor Salesforce Sênior & Arquiteto Técnico",
+		tagline:
+			"Construindo soluções Salesforce de nível empresarial que impulsionam negócios.",
+		cta_contact: "Entre em Contato",
+		cta_resume: "Baixar Currículo",
+		years: "7+",
+		years_label: "Anos de Experiência",
+		triggers: "45+",
+		triggers_label: "Triggers Arquitetados",
+		components: "200+",
+		components_label: "Componentes Entregues",
+		companies: "4+",
+		companies_label: "Empresas Atendidas",
 	},
-	readme: {
-		description1:
-			"Tenho {idade} anos e trabalho como engenheiro de software há {anos} anos. Tenho experiência atuando com o desenvolvimento web, tendo entregado diversos projetos em salesforce, e mobile, tendo feito aplicativos para falicitar a vida dos meus usuários. Porém, me aventuro no mobile, IAs, cyber security e até mesmo no desenvolvimento de games.",
-		description2:
-			"Sou completamente apaixonado pelo que faço e é justamente isso o que me faz levantar todos os dias, buscar por novas tecnologias e ideias para sempre poder entregar o melhor possível.",
+	about: {
+		section_title: "Sobre",
+		bio1: "Desenvolvedor Salesforce Sênior com 7+ anos de experiência especializado em implementação de CPQ, arquitetura avançada de triggers e desenvolvimento full-stack com LWC, Apex e React.",
+		bio2: "Histórico comprovado no gerenciamento de projetos empresariais multimilionários com entregas consistentes de 25%+ de melhoria de desempenho. Construo soluções escaláveis e sustentáveis que resistem ao uso real.",
+		cert_label: "Certificado Salesforce",
+		cert_name: "Platform Foundations",
+		available: "Aberto a projetos de consultoria e posições sênior",
 	},
-	others: {
-		thanks: "Muito obrigado pela visita",
-		description1: "Eu me diverti muito construindo este portfólio.",
-		description2:
-			"Se você tiver alguma pergunta.. sinta-se a vontade para me enviar uma mensagem no email {email} ou entrar em contato atravéz das minhas redes sociais!",
+	expertise: {
+		section_title: "Especialidades",
+		clouds_title: "Salesforce Clouds",
+		tech_title: "Stack Técnica",
+	},
+	experience: {
+		section_title: "Experiência",
+	},
+	contact: {
+		section_title: "Vamos Conversar",
+		subtitle:
+			"Aberto a posições sênior e projetos de consultoria em todo o mundo.",
+		email_label: "Email",
+		linkedin_label: "LinkedIn",
+		resume: "Baixar Currículo",
+		footer: "Projetado e desenvolvido por Ríchard Lucas",
 	},
 } as const;

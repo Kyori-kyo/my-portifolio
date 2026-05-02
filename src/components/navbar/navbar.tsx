@@ -1,42 +1,31 @@
 "use client";
 
 const Navbar = () => {
-	const homeNavigationClick = (element: string) => {
-		const elem = document.getElementById(element);
-
-		elem?.scrollIntoView({
-			behavior: "smooth",
-		});
+	const scrollTo = (id: string) => {
+		document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
 	};
 
 	const navLinks = [
-		{ label: ".Home", clickNavigation: "homePage" },
-		{ label: ".Readme", clickNavigation: "readme" },
-		{ label: ".Projects", clickNavigation: "projects" },
-		{ label: ".Others", clickNavigation: "others" },
+		{ label: ".Home", id: "homePage" },
+		{ label: ".About", id: "about" },
+		{ label: ".Expertise", id: "expertise" },
+		{ label: ".Experience", id: "experience" },
+		{ label: ".Contact", id: "contact" },
 	];
 
 	return (
-		<div
-			className={
-				"flex justify-center items-center gap-5 fixed top-0 h-16 w-full bg-[rgb(22, 22, 22)] backdrop-blur dark:bg-black/[0.3] z-20"
-			}
-		>
-			{navLinks.map((link) => {
-				return (
-					<button
-						key={`id__${link.label}`}
-						type="button"
-						onClick={() => homeNavigationClick(link.clickNavigation)}
-						className={"hover:scale-110 hover:text-orange-500"}
-					>
-						{link.label}
-					</button>
-				);
-			})}
-
-			{/* <Link href="blog" translate="no" className={'hover:scale-110 text-orange-500 hover:text-gray-400'}>.Blog</Link> */}
-		</div>
+		<nav className="flex justify-center items-center gap-6 fixed top-0 h-14 w-full backdrop-blur-md bg-black/30 border-b border-white/[0.04] z-20">
+			{navLinks.map((link) => (
+				<button
+					key={link.id}
+					type="button"
+					onClick={() => scrollTo(link.id)}
+					className="text-sm text-[#7070909] hover:text-amber-400 transition-colors tracking-wide text-[#70708a]"
+				>
+					{link.label}
+				</button>
+			))}
+		</nav>
 	);
 };
 

@@ -1,19 +1,21 @@
-import { Fireplace } from "@/components/homepage/fireplace";
+import { About } from "@/components/about/about";
+import { Contact } from "@/components/contact/contact";
+import { Experience } from "@/components/experience/experience";
+import { Expertise } from "@/components/expertise/expertise";
+import { HomePage } from "@/components/homepage/homePage";
 import { Navbar } from "@/components/navbar/navbar";
-import { Other } from "@/components/other/other";
-import { Projects } from "@/components/projects/projects";
-import { ReadMe } from "@/components/readme/readme";
 import { SocialMedias } from "@/components/socialMedias/SocialMedias";
 
 export default function Home() {
 	return (
-		<main className="flex flex-col">
+		<main>
 			<Navbar />
 			<SocialMedias />
-			<Fireplace />
-			<ReadMe />
-			<Projects />
-			<Other />
+			<HomePage />
+			<About />
+			<Expertise />
+			<Experience />
+			<Contact />
 		</main>
 	);
 }
