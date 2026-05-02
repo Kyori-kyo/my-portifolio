@@ -2,6 +2,9 @@
   "name": "portfolio2",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "scripts": {
     "start:dev": "next dev",
     "dev": "next dev",
@@ -11,7 +14,7 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.2",
-    "@types/node": "20.4.5",
+    "@types/node": "24.12.2",
     "@types/react": "18.2.18",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
